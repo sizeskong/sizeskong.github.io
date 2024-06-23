@@ -852,17 +852,92 @@ highlightCurrentMenuArea = true
 
 ## Hugo 自动部署到 Github Pages
 
-测试成功搭建成功
+1. 创建新的存储库
 
-测试成功搭建成功
+   ![image-20240623190435212](index/image-20240623190435212.png)
 
-测试成功搭建成功
+2. 创建新的分支 `gh-pages`
 
-测试成功搭建成功
+   ![image-20240623191121461](index/image-20240623191121461.png)
 
-测试成功搭建成功
+3. 设置 `gh-pages` 分支为网页发布源
 
-测试成功搭建成功
+   ![image-20240623192053771](index/image-20240623192053771.png)
+
+4. 域名解析
+
+   1. 进入解析界面
+   2. 添加记录
+   3. 记录类型选择 **CNAME**
+   4. 选择主机记录，根据提示自行选择
+   5. 解析请求来源默认
+   6. 记录值填写 GitHub Pages 上的域名，例如：username.github.io
+   7. 确认
+
+   示例：
+
+   ![image-20240623192234184](index/image-20240623192234184.png)
+
+5. 绑定解析的域名
+
+   1. 打开 Github 自己博客的项目，点击 settings 进入设置界面
+   2. 下翻到 Pages 目录，进入 Github Pages 下的 Custom domain ，填入刚解析的域名
+   3. 勾选 Enforce HTTPS ，使用 HTTPS 保护 GitHub Pages 网站的信息（默认自动勾选）。
+   4. 点击 Save
+
+   示例：
+
+   ![image-20240623192540953](index/image-20240623192540953.png)
+
+   
+
+6. 拷贝项目到本地目录
+
+   1. 克隆项目地址
+
+      ![image-20240623192924555](index/image-20240623192924555.png)
+
+   2. 克隆到本地的文件目录
+
+      ![image-20240623193316709](index/image-20240623193316709.png)
+
+   
+
+   
+
+7. 进入到自己的博客项目
+
+   1. 把 克隆到本地目录中的文件 复制到 自己的博客项目中
+
+      ![image-20240623193620036](index/image-20240623193620036.png)
+
+8. 进行发布部署
+
+   ```shell
+   git add .
+   git commit -m "Init Hugo Blog"
+   git push origin main
+   ```
+
+9. 访问地址
+
+   项目地址：https://sizeskong.github.io 
+
+   或者 
+
+   域名地址：https://blog.kong.love
+
+​	
+
+
+
+### 一步到位
+
+Hugo 官网部署到 Github Pages ：https://gohugo.io/hosting-and-deployment/hosting-on-github/
+
+参考主题文档：https://blowfish.page/docs/hosting-deployment/
+
+参考文档：https://github.com/peaceiris/actions-gh-pages
 
 
 

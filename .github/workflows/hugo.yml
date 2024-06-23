@@ -14,13 +14,13 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # 官网：https://github.com/actions/checkout
         with:
           submodules: true
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v3 # 官网：https://github.com/peaceiris/actions-hugo
         with:
           hugo-version: "0.127.0" # 当前使用的版本 hugo version 查看
 
@@ -28,9 +28,9 @@ jobs:
         run: hugo --minify
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4 # 官网：https://github.com/peaceiris/actions-gh-pages
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.HUGO_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./public
+          publish_branch: gh-pages # 设置用作 GitHub Pages 分支的分支名称。默认为 gh-pages。
+          publish_dir: ./public # 把 public 文件里的内容，部署到 gh-pages 分支上
