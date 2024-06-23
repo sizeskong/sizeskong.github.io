@@ -5,24 +5,24 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # 设置要部署的分支
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-20.04
+  deploy:
+    runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.127.0"
+          hugo-version: "0.127.0" # 当前使用的版本 hugo version 查看
 
       - name: Build
         run: hugo --minify
