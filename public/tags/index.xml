@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sizeskong Blog</title>
+    <link>https://blog.kong.love/tags/</link>
+    <description>Recent content in Tags on Sizeskong Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 Sizeskong</copyright>
+    <lastBuildDate>Thu, 20 Jun 2024 22:53:12 +0800</lastBuildDate><atom:link href="https://blog.kong.love/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://blog.kong.love/tags/hugo/</link>
+      <pubDate>Thu, 20 Jun 2024 22:53:12 +0800</pubDate>
+      
+      <guid>https://blog.kong.love/tags/hugo/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
