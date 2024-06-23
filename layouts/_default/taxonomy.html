@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="tag-list">
+  {{ range .Data.Terms.Alphabetical }}
+  <div class="tag">
+    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

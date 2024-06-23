@@ -1,0 +1,291 @@
+# -- Theme Options --
+# These options control how the theme functions and allow you to
+# customise the display of your website.
+#
+# Refer to the theme docs for more details about each of these parameters.
+# https://blowfish.page/docs/configuration/#theme-parameters
+
+# 主题使用的颜色
+colorScheme = "blowfish"
+
+# 默认的主题外观，可以是 light 或者 dark
+defaultAppearance = "light" # valid options: light or dark
+
+# 主题外观是否根据访问者操作系统的偏好自动切换。设置为 false 会强制网站始终使用 defaultAppearance
+autoSwitchAppearance = true
+
+# 是否开启网站的搜索功能，设为 true 即为启用
+enableSearch = true
+
+# 是否可以将<code>代码块复制到剪贴板
+enableCodeCopy = true
+
+# 指定最近文章中应该展示的模块。 如果没有指定，则使用文章数量最多的板块。
+# mainSections = ["section1", "section2"]
+# 用于支持搜索引擎爬虫如何处理你的网站。
+# robots = ""
+
+# 禁用图片上所有图片的调整大小和优化功能。
+disableImageOptimization = false
+
+# 禁用文本类型的标题，对基于 logo 的标题很有用。
+disableTextInHeader = true
+
+# 设置默认背景图，用于 background 和 hero 布局下的主页
+# defaultBackgroundImage = "image.jpg" # 默认用于背景图像 
+
+# 设置默认背景图片，用于所有文章的featured图片，可以通过文章目录中的 featured 图片替换。
+# defaultFeaturedImage = "IMAGE.jpg" # used as default for featured images in all articles
+
+# 当菜单被选择时，标记主菜单中的菜单项。
+highlightCurrentMenuArea = true
+
+# 开启智能目录，视图中的项目将会被高亮显示。
+# smartTOC = true
+
+# 当开启智能目录，如果目录级别不再被聚焦时，将会隐藏更深层次的目录。
+# smartTOCHideUnfocusedChildren = true
+
+[header]
+  layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+
+
+# 页脚
+[footer]
+  showMenu = true # 显示/隐藏页面底部菜单
+  showCopyright = true # 是否在底部显示 copyright 版权信息
+  showThemeAttribution = true # 是否在网站底部中显示"powered by" 的主题归属信息
+  showAppearanceSwitcher = true # 是否在也页面底部显示外观切换器
+  showScrollToTop = true # 当设置为 true 时，显示返回顶部的箭头按钮
+
+# 主页
+[homepage]
+  layout = "profile" # valid options: page, profile, hero, card, background, custom 有效选项：页面、简介、英雄、卡片、背景、自定义
+  # homepageImage = "image.jpg" # 在 hero 和 card 布局中使用的图像
+  showRecent = true # 是否在主页展示最新文章列表。
+  showRecentItems = 6 # 如果将 showRecent 设置为 true，此参数用于显示多少篇文章。如果没有设置或者为0，则默认显示5篇文章
+  showMoreLink = true # 是否在主页底部添加“显示更多”，该链接会降会用带到一个预定义位置。
+  showMoreLinkDest = "/posts" # 更多按钮所指向的位置。
+  cardView = true # 将列表展示为卡片容器。
+  cardViewScreenWidth = false # 增强列表中卡片的宽度，使其可以占据可用的全部宽度。
+  layoutBackgroundBlur = true # 向下滚动主页时，是否模糊背景图。
+
+# 文章页
+[article]
+  # 是否显示日期。
+  showDate = true 
+
+  # 缩略图是否会在每个页面中作为 hero 图像显示。
+  showHero = false 
+
+  # hero 图像的展示样式，可选的参数值有：basic、big、background、thumbAndBackground
+  heroStyle = "background" 
+
+  # 是否展示文章的更新日期。
+  showDateUpdated = false 
+
+  # 是否在文章底部显示作者框。
+  showAuthor = false 
+
+  # 作者框显示在每页的底部而不是顶部。
+  showAuthorBottom = false 
+
+  # 向下滚动文章页时，是否模糊背景图。
+  layoutBackgroundBlur = true 
+
+  # 在标题和正文之间添加空白区域间隔。
+  layoutBackgroundHeaderSpace = true 
+
+   # 是否在标题栏显示面包屑导航。
+  showBreadcrumbs = false
+
+  # 当使用 --buildDrafts 构建网站时，是否在文章旁边显示草稿
+  showDraftLabel = true 
+
+  # 是否展示编辑文章的链接。
+  showEdit = false 
+
+  # 是否默认显示打开系列模块、
+  seriesOpened = false 
+
+  # 是否在文章标题旁添加锚点。
+  showHeadingAnchors = true 
+
+  # 是否在文章末尾展示上一篇/下一篇的文章链接。
+  showPagination = true
+
+  # 是否翻转下一篇/上一篇文章链接的方向。
+  invertPagination = false 
+
+  # 是否展示文章的阅读时间。如果你的语言包含 CJK 语言，需要在 config.toml 中开启 hasCJKLanguage 参数。
+  showReadingTime = true 
+
+  # 是否显示文章的字数。 如果你的语言属于 CJK 语言，需要在 hugo.toml 中开启 hasCJKLanguage 参数。
+  showWordCount = true 
+
+  # 是否展示文章的目录。
+  showTableOfContents = true
+
+  # 为文章显示相关内容。
+  showRelatedContent = false 
+
+  # 如果启用showRelatedContent，则限制显示相关文章的数量
+  relatedContentLimit = 3 
+
+  # 是否显示文章的分类或标签信息。
+  showTaxonomies = false 
+
+  # 否在文章或列表中显示 authors 分类。这需要开启多个作者 multiple authors 和 authors 分类法。 
+  showAuthorsBadges = false 
+
+  # 是否在文章末尾添加 评论部分
+  showComments = true 
+
+  # 在文章末尾显示的分享链接。如果没有提供或设置为 false，则不会显示任何分享链接。可用的值包括：“linkedin”、“twitter”、“reddit”、“pinterest”、“facebook”、“email”、“whatsapp” 和 “telegram”
+  # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
+  
+  # 指定是否激活文章阅读的禅模式，即隐藏常规的界面元素。
+  showZenMode = true 
+
+
+[list]
+  # 缩略图是否会在每个页面中作为 hero 图像显示。
+  showHero = false
+
+  # hero 图像的展示样式，可选的参数值有：basic、big、background、thumbAndBackground。
+  # heroStyle = "background" 
+
+  # 是否在标题栏显示面包屑导航。
+  showBreadcrumbs = false
+
+  # 向下滚动列表页时，是否模糊背景图。
+  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
+
+  # 在标题和正文之间添加空白区域间隔。
+  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background  
+
+  # 是否展示目录。
+  showTableOfContents = false
+
+  # 是否在列表页显示文章摘要。如果在扉页参数中没有提供摘要，那么将会使用站点配置 中的 summaryLength 参数自动生成一个。
+  showSummary = false
+
+  # 是否显示文章阅读量。
+  showViews = false
+
+  # 是否显示文章点赞量。
+  showLikes = false
+
+  # 是否将每个文章显示未卡片或简单的内联文本。
+  showCards = false
+
+  # 是否根据年做聚合。
+  groupByYear = true
+
+  # 将列表展示为卡片容器。
+  cardView = false
+
+  # 增强列表中卡片的宽度，使其可以占据可用的全部宽度。
+  cardViewScreenWidth = false
+
+  # 将项目宽度限制为 prose 以提高可读性。在没有 featurn 图片的时候非常有用。
+  constrainItemsWidth = false
+
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+# 分类法
+[taxonomy]
+  # 是否在分类列表总显示对应的数量。
+  showTermCount = true
+
+  # 缩略图是否会在每个页面中作为 hero 图像显示。
+  showHero = false
+
+  # hero 图像的展示样式，可选的参数值有：basic、big、background、thumbAndBackground。
+  # heroStyle = "background" 
+  
+  # 是否在标题栏显示面包屑导航。
+  showBreadcrumbs = false
+
+  # 是否显示文章阅读量。这需要集成 firebase 
+  showViews = false
+
+  # 是否显示文章点赞量。这需要集成 firebase 
+  showLikes = false
+
+  # 是否显示目录。
+  showTableOfContents = false
+
+  # 将列表展示为卡片容器。
+  cardView = false
+
+
+# 术语
+[term]
+  # 缩略图是否会在每个页面中作为 hero 图像显示。
+  showHero = false
+
+  # hero 图像的展示样式，可选的参数值有： basic、big、background、thumbAndBackground。
+  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  
+  # 是否在标题栏显示面包屑导航。
+  showBreadcrumbs = false
+
+  # 是否显示文章阅读量。这需要集成 firebase 
+  showViews = false
+
+  # 是否显示文章点赞量。这需要集成 firebase 
+  showLikes = false
+
+  # 是否显示目录。
+  showTableOfContents = true
+
+  # 是否根据年做聚合。
+  groupByYear = false
+
+  # 将列表展示为卡片容器。
+  cardView = false
+
+  # 增强列表中卡片的宽度，使其可以占据可用的全部宽度。
+  cardViewScreenWidth = false
+
+
+# 文章阅读点赞量
+[firebase]
+  # apiKey = "XXXXXX"
+  # authDomain = "XXXXXX"
+  # projectId = "XXXXXX"
+  # storageBucket = "XXXXXX"
+  # messagingSenderId = "XXXXXX"
+  # appId = "XXXXXX"
+  # measurementId = "XXXXXX"
+
+
+# 支持 Fathom 站点分析平台
+[fathomAnalytics]
+  # site = "ABC12345"
+  # domain = "llama.yoursite.com"
+
+# 支持 Umami 站点分析平台
+[umamiAnalytics]
+  # websiteid = "ABC12345"
+  # domain = "llama.yoursite.com"
+
+
+# buymeacoffee 账号信息。
+[buymeacoffee]
+  # identifier = ""
+  # globalWidget = true
+  # globalWidgetMessage = "Hello"
+  # globalWidgetColor = "#FFDD00"
+  # globalWidgetPosition = "Right"
+
+
+# 验证
+[verification]
+  # google = ""
+  # bing = ""
+  # pinterest = ""
+  # yandex = ""

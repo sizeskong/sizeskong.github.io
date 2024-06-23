@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blog.kong.love/sitemap.xml

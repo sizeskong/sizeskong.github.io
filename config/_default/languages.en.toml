@@ -1,0 +1,27 @@
+languageCode = "en"
+languageName = "English"
+weight = 2
+
+# 网页标题
+title = "Sizeskong Blog"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  # logo = "img/logo.png"
+  # secondaryLogo = "img/secondary-logo.png"
+  # description = "My awesome website"
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+# 作者信息
+[author]
+  name = "Sizeskong"
+  image = "img/avatar.jpg"
+  #headline = "一个强大、轻量级的 Hugo 主题。"
+  #bio = "一个强大、轻量级的 Hugo 主题。"
+  #links = [
+  #  { x-twitter = "https://twitter.com/burufugu" },
+  #  { github = "https://github.com/sizeskong" },
+  #]
