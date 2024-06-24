@@ -7,9 +7,9 @@
         clientSecret: '{{ .Site.Params.gitalk_client_secret }}',
         repo: '{{ .Site.Params.gitalk_repo }}',
         owner: '{{ .Site.Params.gitalk_owner }}',
-        admin: {{ .Site.Params.gitalk_admins }},
+        admin: '{{ .Site.Params.gitalk_admins }}',
         id: '{{ .Permalink }}',
-        distractionFreeMode: false
+        distractionFreeMode: false  // 无干扰模式（设置 distractionFreeMode 为 true 开启）
     })
     gitalk.render('gitalk-container')
 </script>
