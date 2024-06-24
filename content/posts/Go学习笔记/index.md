@@ -16,4 +16,3 @@ draft = false
 
 ## Go 面试准备
 
-测试

@@ -852,100 +852,163 @@ highlightCurrentMenuArea = true
 
 ## Hugo 自动部署到 Github Pages
 
-1. 创建新的存储库
+这里使用的是分支部署，用 `main` 分支来存储源文件，用 `gh-pages` 来作为网页发布源。如果嫌麻烦，也可以直接使用官网的配置进行部署。[官网部署](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 
-   ![image-20240623190435212](index/image-20240623190435212.png)
+### 1、创建仓库
 
-2. 创建新的分支 `gh-pages`
+![image-20240623190435212](index/image-20240623190435212.png)
 
-   ![image-20240623191121461](index/image-20240623191121461.png)
+### 2、创建分支
 
-3. 设置 `gh-pages` 分支为网页发布源
+![image-20240623191121461](index/image-20240623191121461.png)
 
-   ![image-20240623192053771](index/image-20240623192053771.png)
+### 3、设置网页发布源
 
-4. 域名解析
+![image-20240623192053771](index/image-20240623192053771.png)
 
-   1. 进入解析界面
-   2. 添加记录
-   3. 记录类型选择 **CNAME**
-   4. 选择主机记录，根据提示自行选择
-   5. 解析请求来源默认
-   6. 记录值填写 GitHub Pages 上的域名，例如：username.github.io
-   7. 确认
+### 4、域名解析（域名自行购买）
 
-   示例：
+1. 进入解析界面
+2. 添加记录
+3. 记录类型选择 **CNAME**
+4. 选择主机记录，根据提示自行选择
+5. 解析请求来源默认
+6. 记录值填写 GitHub Pages 上的域名，例如：username.github.io
+7. 确认
 
-   ![image-20240623192234184](index/image-20240623192234184.png)
+示例：
 
-5. 绑定解析的域名
+![image-20240623192234184](index/image-20240623192234184.png)
 
-   1. 打开 Github 自己博客的项目，点击 settings 进入设置界面
-   2. 下翻到 Pages 目录，进入 Github Pages 下的 Custom domain ，填入刚解析的域名
-   3. 勾选 Enforce HTTPS ，使用 HTTPS 保护 GitHub Pages 网站的信息（默认自动勾选）。
-   4. 点击 Save
+### 5、绑定解析的域名
 
-   示例：
+1. 打开 Github 自己博客的项目，点击 settings 进入设置界面
+2. 下翻到 Pages 目录，进入 Github Pages 下的 Custom domain ，填入刚解析的域名
+3. 勾选 Enforce HTTPS ，使用 HTTPS 保护 GitHub Pages 网站的信息（默认自动勾选）。
+4. 点击 Save
 
-   ![image-20240623192540953](index/image-20240623192540953.png)
+示例：
 
-   
-
-6. 拷贝项目到本地目录
-
-   1. 克隆项目地址
-
-      ![image-20240623192924555](index/image-20240623192924555.png)
-
-   2. 克隆到本地的文件目录
-
-      ![image-20240623193316709](index/image-20240623193316709.png)
-
-   
-
-   
-
-7. 进入到自己的博客项目
-
-   1. 把 克隆到本地目录中的文件 复制到 自己的博客项目中
-
-      ![image-20240623193620036](index/image-20240623193620036.png)
-
-8. 进行发布部署
-
-   ```shell
-   git add .
-   git commit -m "Init Hugo Blog"
-   git push origin main
-   ```
-
-9. 访问地址
-
-   项目地址：https://sizeskong.github.io 
-
-   或者 
-
-   域名地址：https://blog.kong.love
-
-​	
+![image-20240623192540953](index/image-20240623192540953.png)
 
 
 
-### 一步到位
+### 6、克隆仓库到本地
 
-Hugo 官网部署到 Github Pages ：https://gohugo.io/hosting-and-deployment/hosting-on-github/
+**克隆项目地址**
 
-参考主题文档：https://blowfish.page/docs/hosting-deployment/
+![image-20240623192924555](index/image-20240623192924555.png)
 
-参考文档：https://github.com/peaceiris/actions-gh-pages
+**克隆仓库到本地的文件目录**
 
-
-
-
+![image-20240623193316709](index/image-20240623193316709.png)
 
 
 
+### 7、打开自己的博客项目
 
+把 克隆到本地目录中的文件 复制到 自己的博客项目中
+
+![image-20240623193620036](index/image-20240623193620036.png)
+
+### 8、创建 Actions 工作流
+
+在项目根目录下创建`.github/workflows/` 的目录，并以 `.yml` 后缀命名，内容如下：
+
+```yaml
+# .github/workflows/hugo.yml
+
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 设置要部署的分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 # 官网：https://github.com/actions/checkout
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3 # 官网：https://github.com/peaceiris/actions-hugo
+        with:
+          hugo-version: "0.127.0" # 当前使用的版本 hugo version 查看
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4 # 官网：https://github.com/peaceiris/actions-gh-pages
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.HUGO_TOKEN }}
+          publish_branch: gh-pages # 设置用作 GitHub Pages 分支的分支名称。默认为 gh-pages。
+          publish_dir: ./public # 把 public 文件里的内容，部署到 gh-pages 分支上
+```
+
+
+
+### 9、创建令牌
+
+1. 点击头像
+2. 选择 Settings
+3. 左侧找到 Developer settings
+4. 选择 Personal access tokens 下的 Tokens (classic)
+5. 点击 Generate new token 选择 Generate new token (classic)
+6. 输入账号密码
+7. Note下输入令牌备注（随便填，建议大写）
+8. Expiration 选择 no expiration （不过期）
+9. 勾选 repo 和 workflow
+10. 点击 Generate token
+11. 复制 ghp_xxx 内容（只显示一次）
+
+### 10、添加存储库机密
+
+1. 进入到自己的博客项目
+
+2. 点击 Settings
+
+3. 找到 Secrets and variables 下的 Actions
+
+4. 点击 New repository secret
+
+5. 输入 Name 
+
+   **注意：Name 与 `.github/workflows/hugo.yml` 文件中的  github_token: ${{ secrets.`HUGO_TOKEN` }} 一致**
+
+6. 把刚才以 ghp_xxx 开头的token复制到 Secret 下
+
+7. 点击 Add secret
+
+
+
+### 11、发布部署
+
+上传到远程仓库 `main` 分支中 会自动把 **pulic** 文件中的内容部署到 `gh-pages` 中
+
+在博客项目根目录下：右击——Git Bash Here
+
+```shell
+git add .
+git commit -m "Init Hugo Blog" # 描述上传的内容
+git push origin main
+```
+
+### 12、博客访问地址
+
+项目地址：[https://sizeskong.github.io](https://sizeskong.github.io ) 
+
+域名地址：[https://blog.kong.love](https://blog.kong.love)
+
+**注意：如果配置了域名，会自动跳转到域名地址，也可以之间访问域名地址。**
 
 
 

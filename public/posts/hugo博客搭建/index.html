@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-cn" />
@@ -15,7 +15,7 @@
   <meta name="keywords" content="hugo, " />
   
   
-  <link rel="canonical" href="https://blog.kong.love/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+  <link rel="canonical" href="http://localhost:1313/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
   
   
   
@@ -63,7 +63,7 @@
   
   
   
-  <meta property="og:url" content="https://blog.kong.love/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+  <meta property="og:url" content="http://localhost:1313/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
   <meta property="og:site_name" content="Sizeskong Blog">
   <meta property="og:title" content="Hugo博客搭建">
   <meta property="og:locale" content="zh_cn">
@@ -88,7 +88,7 @@
     
     
     "inLanguage": "zh-cn",
-    "url" : "https:\/\/blog.kong.love\/posts\/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA\/",
+    "url" : "http:\/\/localhost:1313\/posts\/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA\/",
     "author" : {
       "@type": "Person",
       "name": "Sizeskong"
@@ -102,7 +102,7 @@
     "keywords": ["hugo"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "5110"
+    "wordCount": "6063"
   }]
   </script>
 
@@ -660,7 +660,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-06-20 22:53:12 &#43;0800 CST">2024-06-20</time><span class="px-2 text-primary-500">&middot;</span><span>5110 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">11 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2024-06-20 22:53:12 &#43;0800 CST">2024-06-20</time><span class="px-2 text-primary-500">&middot;</span><span>6063 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">13 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
 <script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
@@ -750,7 +750,22 @@
       </ul>
     </li>
     <li><a href="#hugo图片显示">Hugo图片显示</a></li>
-    <li><a href="#hugo-自动部署到-github-pages">Hugo 自动部署到 Github Pages</a></li>
+    <li><a href="#hugo-自动部署到-github-pages">Hugo 自动部署到 Github Pages</a>
+      <ul>
+        <li><a href="#1创建仓库">1、创建仓库</a></li>
+        <li><a href="#2创建分支">2、创建分支</a></li>
+        <li><a href="#3设置网页发布源">3、设置网页发布源</a></li>
+        <li><a href="#4域名解析域名自行购买">4、域名解析（域名自行购买）</a></li>
+        <li><a href="#5绑定解析的域名">5、绑定解析的域名</a></li>
+        <li><a href="#6克隆仓库到本地">6、克隆仓库到本地</a></li>
+        <li><a href="#7打开自己的博客项目">7、打开自己的博客项目</a></li>
+        <li><a href="#8创建-actions-工作流">8、创建 Actions 工作流</a></li>
+        <li><a href="#9创建令牌">9、创建令牌</a></li>
+        <li><a href="#10添加存储库机密">10、添加存储库机密</a></li>
+        <li><a href="#11发布部署">11、发布部署</a></li>
+        <li><a href="#12博客访问地址">12、博客访问地址</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -782,7 +797,22 @@
       </ul>
     </li>
     <li><a href="#hugo图片显示">Hugo图片显示</a></li>
-    <li><a href="#hugo-自动部署到-github-pages">Hugo 自动部署到 Github Pages</a></li>
+    <li><a href="#hugo-自动部署到-github-pages">Hugo 自动部署到 Github Pages</a>
+      <ul>
+        <li><a href="#1创建仓库">1、创建仓库</a></li>
+        <li><a href="#2创建分支">2、创建分支</a></li>
+        <li><a href="#3设置网页发布源">3、设置网页发布源</a></li>
+        <li><a href="#4域名解析域名自行购买">4、域名解析（域名自行购买）</a></li>
+        <li><a href="#5绑定解析的域名">5、绑定解析的域名</a></li>
+        <li><a href="#6克隆仓库到本地">6、克隆仓库到本地</a></li>
+        <li><a href="#7打开自己的博客项目">7、打开自己的博客项目</a></li>
+        <li><a href="#8创建-actions-工作流">8、创建 Actions 工作流</a></li>
+        <li><a href="#9创建令牌">9、创建令牌</a></li>
+        <li><a href="#10添加存储库机密">10、添加存储库机密</a></li>
+        <li><a href="#11发布部署">11、发布部署</a></li>
+        <li><a href="#12博客访问地址">12、博客访问地址</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1862,12 +1892,381 @@
     </span>        
     
 </h2>
-<p>测试成功搭建成功</p>
-<p>测试成功搭建成功</p>
-<p>测试成功搭建成功</p>
-<p>测试成功搭建成功</p>
-<p>测试成功搭建成功</p>
-<p>测试成功搭建成功</p>
+<p>这里使用的是分支部署，用 <code>main</code> 分支来存储源文件，用 <code>gh-pages</code> 来作为网页发布源。如果嫌麻烦，也可以直接使用官网的配置进行部署。<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">官网部署</a></p>
+
+
+<h3 class="relative group">1、创建仓库 
+    <div id="1%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#1%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_660x0_resize_box_3.png"
+        alt="image-20240623190435212"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">2、创建分支 
+    <div id="2%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_660x0_resize_box_3.png"
+        alt="image-20240623191121461"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">3、设置网页发布源 
+    <div id="3%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5%E5%8F%91%E5%B8%83%E6%BA%90" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#3%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5%E5%8F%91%E5%B8%83%E6%BA%90" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_660x0_resize_box_3.png"
+        alt="image-20240623192053771"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">4、域名解析（域名自行购买） 
+    <div id="4%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D%E8%87%AA%E8%A1%8C%E8%B4%AD%E4%B9%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#4%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D%E8%87%AA%E8%A1%8C%E8%B4%AD%E4%B9%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>进入解析界面</li>
+<li>添加记录</li>
+<li>记录类型选择 <strong>CNAME</strong></li>
+<li>选择主机记录，根据提示自行选择</li>
+<li>解析请求来源默认</li>
+<li>记录值填写 GitHub Pages 上的域名，例如：username.github.io</li>
+<li>确认</li>
+</ol>
+<p>示例：</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_660x0_resize_box_3.png"
+        alt="image-20240623192234184"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">5、绑定解析的域名 
+    <div id="5%E7%BB%91%E5%AE%9A%E8%A7%A3%E6%9E%90%E7%9A%84%E5%9F%9F%E5%90%8D" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#5%E7%BB%91%E5%AE%9A%E8%A7%A3%E6%9E%90%E7%9A%84%E5%9F%9F%E5%90%8D" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>打开 Github 自己博客的项目，点击 settings 进入设置界面</li>
+<li>下翻到 Pages 目录，进入 Github Pages 下的 Custom domain ，填入刚解析的域名</li>
+<li>勾选 Enforce HTTPS ，使用 HTTPS 保护 GitHub Pages 网站的信息（默认自动勾选）。</li>
+<li>点击 Save</li>
+</ol>
+<p>示例：</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_660x0_resize_box_3.png"
+        alt="image-20240623192540953"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">6、克隆仓库到本地 
+    <div id="6%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93%E5%88%B0%E6%9C%AC%E5%9C%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#6%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93%E5%88%B0%E6%9C%AC%E5%9C%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><strong>克隆项目地址</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_660x0_resize_box_3.png"
+        alt="image-20240623192924555"
+      />
+      
+    </figure>
+</p>
+<p><strong>克隆仓库到本地的文件目录</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_660x0_resize_box_3.png"
+        alt="image-20240623193316709"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">7、打开自己的博客项目 
+    <div id="7%E6%89%93%E5%BC%80%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#7%E6%89%93%E5%BC%80%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>把 克隆到本地目录中的文件 复制到 自己的博客项目中</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_660x0_resize_box_3.png"
+        alt="image-20240623193620036"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">8、创建 Actions 工作流 
+    <div id="8%E5%88%9B%E5%BB%BA-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#8%E5%88%9B%E5%BB%BA-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在项目根目录下创建<code>.github/workflows/</code> 的目录，并以 <code>.yml</code> 后缀命名，内容如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># .github/workflows/hugo.yml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">GitHub Pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main</span><span class="w"> </span><span class="c"># 设置要部署的分支</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">concurrency</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.workflow }}-${{ github.ref }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w"> </span><span class="c"># 官网：https://github.com/actions/checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v3</span><span class="w"> </span><span class="c"># 官网：https://github.com/peaceiris/actions-hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.127.0&#34;</span><span class="w"> </span><span class="c"># 当前使用的版本 hugo version 查看</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo --minify</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v4</span><span class="w"> </span><span class="c"># 官网：https://github.com/peaceiris/actions-gh-pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.ref == &#39;refs/heads/main&#39; }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.HUGO_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">gh-pages</span><span class="w"> </span><span class="c"># 设置用作 GitHub Pages 分支的分支名称。默认为 gh-pages。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w"> </span><span class="c"># 把 public 文件里的内容，部署到 gh-pages 分支上</span><span class="w">
+</span></span></span></code></pre></div>
+
+<h3 class="relative group">9、创建令牌 
+    <div id="9%E5%88%9B%E5%BB%BA%E4%BB%A4%E7%89%8C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#9%E5%88%9B%E5%BB%BA%E4%BB%A4%E7%89%8C" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>点击头像</li>
+<li>选择 Settings</li>
+<li>左侧找到 Developer settings</li>
+<li>选择 Personal access tokens 下的 Tokens (classic)</li>
+<li>点击 Generate new token 选择 Generate new token (classic)</li>
+<li>输入账号密码</li>
+<li>Note下输入令牌备注（随便填，建议大写）</li>
+<li>Expiration 选择 no expiration （不过期）</li>
+<li>勾选 repo 和 workflow</li>
+<li>点击 Generate token</li>
+<li>复制 ghp_xxx 内容（只显示一次）</li>
+</ol>
+
+
+<h3 class="relative group">10、添加存储库机密 
+    <div id="10%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8%E5%BA%93%E6%9C%BA%E5%AF%86" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#10%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8%E5%BA%93%E6%9C%BA%E5%AF%86" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>
+<p>进入到自己的博客项目</p>
+</li>
+<li>
+<p>点击 Settings</p>
+</li>
+<li>
+<p>找到 Secrets and variables 下的 Actions</p>
+</li>
+<li>
+<p>点击 New repository secret</p>
+</li>
+<li>
+<p>输入 Name</p>
+<p><strong>注意：Name 与 <code>.github/workflows/hugo.yml</code> 文件中的  github_token: ${{ secrets.<code>HUGO_TOKEN</code> }} 一致</strong></p>
+</li>
+<li>
+<p>把刚才以 ghp_xxx 开头的token复制到 Secret 下</p>
+</li>
+<li>
+<p>点击 Add secret</p>
+</li>
+</ol>
+
+
+<h3 class="relative group">11、发布部署 
+    <div id="11%E5%8F%91%E5%B8%83%E9%83%A8%E7%BD%B2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#11%E5%8F%91%E5%B8%83%E9%83%A8%E7%BD%B2" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>上传到远程仓库 <code>main</code> 分支中 会自动把 <strong>pulic</strong> 文件中的内容部署到 <code>gh-pages</code> 中</p>
+<p>在博客项目根目录下：右击——Git Bash Here</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Init Hugo Blog&#34;</span> <span class="c1"># 描述上传的内容</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></div>
+
+<h3 class="relative group">12、博客访问地址 
+    <div id="12%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#12%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>项目地址：<a href="https://sizeskong.github.io" target="_blank">https://sizeskong.github.io</a></p>
+<p>域名地址：<a href="https://blog.kong.love" target="_blank">https://blog.kong.love</a></p>
+<p><strong>注意：如果配置了域名，会自动跳转到域名地址，也可以之间访问域名地址。</strong></p>
 
         </div>
         
@@ -2000,7 +2399,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="https://blog.kong.love/"
+  data-url="http://localhost:1313/"
   style="z-index:500"
 >
   <div
