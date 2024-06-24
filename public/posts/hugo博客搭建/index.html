@@ -1,16 +1,2508 @@
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<div id="gitalk-container"></div>
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Hugo博客搭建 &middot; Sizeskong Blog</title>
+  <meta name="title" content="Hugo博客搭建 &middot; Sizeskong Blog" />
+  
+  
+  <meta name="keywords" content="hugo, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.a99c1a57c98168bc7e9a6a2d6c2cb2eac5f8257891ad3324d2276233a7ee6c36c55b35ed3c2238f3f8dc51dd501a777da0856c7a7e365b7d4b559fb81b769fa5.css"
+    integrity="sha512-qZwaV8mBaLx&#43;mmotbCyy6sX4JXiRrTMk0idiM6fubDbFWzXtPCI48/jcUd1QGnd9oIVsen42W31LVZ&#43;4G3afpQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.949e93ad68f98f91b41032983a7aee8da40cd845c548ac475ad1b4771bb9d273da1fb4d059d4d2f8f724a6a7ce5962b522b302ed72b43b8a1057a0e4e3ffc58e.js"
+    integrity="sha512-lJ6TrWj5j5G0EDKYOnrujaQM2EXFSKxHWtG0dxu50nPaH7TQWdTS&#43;PckpqfOWWK1IrMC7XK0O4oQV6Dk4//Fjg==" data-copy="" data-copied=""></script>
+  
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+  <meta property="og:site_name" content="Sizeskong Blog">
+  <meta property="og:title" content="Hugo博客搭建">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-20T22:53:12+08:00">
+    <meta property="article:modified_time" content="2024-06-20T22:53:12+08:00">
+    <meta property="article:tag" content="Hugo">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hugo博客搭建">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Hugo博客搭建",
+    "headline": "Hugo博客搭建",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/posts\/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Sizeskong"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-06-20T22:53:12\u002b08:00",
+    "datePublished": "2024-06-20T22:53:12\u002b08:00",
+    
+    "dateModified": "2024-06-20T22:53:12\u002b08:00",
+    
+    "keywords": ["hugo"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "6383"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Sizeskong" />
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        首页
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        归档
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        标签
+    </p>
+</a>
+
+
+
+            
+             
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a  class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
+      知识
+    </a>
+    <span>
+      
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            Go知识
+          </p>
+        </a>
+        
+        <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="">
+            MySQL知识
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            
+            
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        关于
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="https://github.com/sizeskong"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <span  class="mr-1" >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium" title="">
+        GitHub
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            首页
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            归档
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            标签
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                     
+  <li class="mt-1">
+    <a class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            知识
+        </p>
+        <span>
+            
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+        </span>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            Go知识
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="">
+            MySQL知识
+        </p>
+    </a>
+</li>
+
+<li class="mb-2"></li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            关于
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://github.com/sizeskong"  target="_blank"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <div  class="mr-2" >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg" title="">
+            GitHub
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
 <script>
-    var gitalk = new Gitalk({
-        clientID: 'Ov23liHU7qrWIwuBtavT',
-        clientSecret: '97eb8724ea7a656ea5015bc22707a879c424719a',
-        repo: 'sizeskong.github.io',
-        owner: 'sizeskong',
-        admin: ["sizeskong"],
-        id: 'http:\/\/localhost:1313\/posts\/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA\/',
-        distractionFreeMode: false
-    })
-    gitalk.render('gitalk-container')
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
 </script>
 
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      Hugo博客搭建
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-06-20 22:53:12 &#43;0800 CST">2024-06-20</time><span class="px-2 text-primary-500">&middot;</span><span>6383 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">13 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+<script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
+
+<span class="mb-[2px]">
+    <span id="zen-mode-button"
+          class="text-lg hover:text-primary-500"
+          title=""
+          data-title-i18n-disable=""
+          data-title-i18n-enable="">
+        <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+    </span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo官网">Hugo官网</a></li>
+    <li><a href="#windows-手动安装-hugo">Windows 手动安装 Hugo</a></li>
+    <li><a href="#配置环境变量">配置环境变量</a></li>
+    <li><a href="#检测是否安装成功">检测是否安装成功</a></li>
+    <li><a href="#创建自己的博客项目">创建自己的博客项目</a></li>
+    <li><a href="#设置主题的配置文件">设置主题的配置文件</a></li>
+    <li><a href="#我的主题效果展示">我的主题效果展示</a></li>
+    <li><a href="#我的配置文件信息">我的配置文件信息</a>
+      <ul>
+        <li><a href="#hugotoml-配置">hugo.toml 配置</a></li>
+        <li><a href="#languagesentoml-配置">languages.en.toml 配置</a></li>
+        <li><a href="#languageszh-cntoml-配置">languages.zh-cn.toml 配置</a></li>
+        <li><a href="#menusentoml-配置">menus.en.toml 配置</a></li>
+        <li><a href="#menuszh-cntoml-配置">menus.zh-cn.toml 配置</a></li>
+        <li><a href="#paramstoml-配置">params.toml 配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo图片显示">Hugo图片显示</a></li>
+    <li><a href="#hugo-自动部署到-github-pages">Hugo 自动部署到 Github Pages</a>
+      <ul>
+        <li><a href="#1创建仓库">1、创建仓库</a></li>
+        <li><a href="#2创建分支">2、创建分支</a></li>
+        <li><a href="#3设置网页发布源">3、设置网页发布源</a></li>
+        <li><a href="#4域名解析域名自行购买">4、域名解析（域名自行购买）</a></li>
+        <li><a href="#5绑定解析的域名">5、绑定解析的域名</a></li>
+        <li><a href="#6克隆仓库到本地">6、克隆仓库到本地</a></li>
+        <li><a href="#7打开自己的博客项目">7、打开自己的博客项目</a></li>
+        <li><a href="#8创建-actions-工作流">8、创建 Actions 工作流</a></li>
+        <li><a href="#9创建令牌">9、创建令牌</a></li>
+        <li><a href="#10添加存储库机密">10、添加存储库机密</a></li>
+        <li><a href="#11发布部署">11、发布部署</a></li>
+        <li><a href="#12博客访问地址">12、博客访问地址</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo-添加-giscus-httpsgiscusappzh-cn评论">Hugo 添加 <a href="https://giscus.app/zh-CN">Giscus </a>评论</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo官网">Hugo官网</a></li>
+    <li><a href="#windows-手动安装-hugo">Windows 手动安装 Hugo</a></li>
+    <li><a href="#配置环境变量">配置环境变量</a></li>
+    <li><a href="#检测是否安装成功">检测是否安装成功</a></li>
+    <li><a href="#创建自己的博客项目">创建自己的博客项目</a></li>
+    <li><a href="#设置主题的配置文件">设置主题的配置文件</a></li>
+    <li><a href="#我的主题效果展示">我的主题效果展示</a></li>
+    <li><a href="#我的配置文件信息">我的配置文件信息</a>
+      <ul>
+        <li><a href="#hugotoml-配置">hugo.toml 配置</a></li>
+        <li><a href="#languagesentoml-配置">languages.en.toml 配置</a></li>
+        <li><a href="#languageszh-cntoml-配置">languages.zh-cn.toml 配置</a></li>
+        <li><a href="#menusentoml-配置">menus.en.toml 配置</a></li>
+        <li><a href="#menuszh-cntoml-配置">menus.zh-cn.toml 配置</a></li>
+        <li><a href="#paramstoml-配置">params.toml 配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo图片显示">Hugo图片显示</a></li>
+    <li><a href="#hugo-自动部署到-github-pages">Hugo 自动部署到 Github Pages</a>
+      <ul>
+        <li><a href="#1创建仓库">1、创建仓库</a></li>
+        <li><a href="#2创建分支">2、创建分支</a></li>
+        <li><a href="#3设置网页发布源">3、设置网页发布源</a></li>
+        <li><a href="#4域名解析域名自行购买">4、域名解析（域名自行购买）</a></li>
+        <li><a href="#5绑定解析的域名">5、绑定解析的域名</a></li>
+        <li><a href="#6克隆仓库到本地">6、克隆仓库到本地</a></li>
+        <li><a href="#7打开自己的博客项目">7、打开自己的博客项目</a></li>
+        <li><a href="#8创建-actions-工作流">8、创建 Actions 工作流</a></li>
+        <li><a href="#9创建令牌">9、创建令牌</a></li>
+        <li><a href="#10添加存储库机密">10、添加存储库机密</a></li>
+        <li><a href="#11发布部署">11、发布部署</a></li>
+        <li><a href="#12博客访问地址">12、博客访问地址</a></li>
+      </ul>
+    </li>
+    <li><a href="#hugo-添加-giscus-httpsgiscusappzh-cn评论">Hugo 添加 <a href="https://giscus.app/zh-CN">Giscus </a>评论</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">Hugo官网 
+    <div id="hugo%E5%AE%98%E7%BD%91" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hugo%E5%AE%98%E7%BD%91" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><strong>官网地址</strong>：<a href="https://gohugo.io/" target="_blank">https://gohugo.io/</a></p>
+<p><strong>中文地址</strong>：<a href="https://www.gohugo.org/doc/" target="_blank">https://www.gohugo.org/doc/</a></p>
+
+
+<h2 class="relative group">Windows 手动安装 Hugo 
+    <div id="windows-%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-hugo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#windows-%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85-hugo" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><strong>Git</strong> 下载地址：<a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a></p>
+<p><strong>Go</strong> 下载地址：<a href="https://golang.google.cn/dl/" target="_blank">https://golang.google.cn/dl/</a></p>
+<p><strong>Hugo</strong> 下载地址：<a href="https://github.com/gohugoio/hugo/releases" target="_blank">https://github.com/gohugoio/hugo/releases</a></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225635513_hu1c31d84bf487989a8a253c7130baf973_114012_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225635513_hu1c31d84bf487989a8a253c7130baf973_114012_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225635513_hu1c31d84bf487989a8a253c7130baf973_114012_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225635513_hu1c31d84bf487989a8a253c7130baf973_114012_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225635513_hu1c31d84bf487989a8a253c7130baf973_114012_660x0_resize_box_3.png"
+        alt="image-20240620225635513"
+      />
+      
+    </figure>
+</p>
+<p><strong>Dart Sass</strong> 下载：<a href="https://github.com/sass/dart-sass/releases/" target="_blank">https://github.com/sass/dart-sass/releases/</a></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225705144_huf4318d13b66d651a16418ccabaa17903_68936_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225705144_huf4318d13b66d651a16418ccabaa17903_68936_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225705144_huf4318d13b66d651a16418ccabaa17903_68936_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225705144_huf4318d13b66d651a16418ccabaa17903_68936_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225705144_huf4318d13b66d651a16418ccabaa17903_68936_660x0_resize_box_3.png"
+        alt="image-20240620225705144"
+      />
+      
+    </figure>
+</p>
+<p>下载完解压到自己指定的目录，然后配置到环境变量中。<strong>注意：解压后的文件名字可以随便改。</strong></p>
+<p>例如：我解压到 <code>D:\Environment\Hugo</code> 目录下 有 <code>hugo</code> 和 <code>sass</code> 两个文件</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225725124_hue0df6f4913daa5523a413aeb1ea022fb_13280_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225725124_hue0df6f4913daa5523a413aeb1ea022fb_13280_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225725124_hue0df6f4913daa5523a413aeb1ea022fb_13280_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225725124_hue0df6f4913daa5523a413aeb1ea022fb_13280_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225725124_hue0df6f4913daa5523a413aeb1ea022fb_13280_660x0_resize_box_3.png"
+        alt="image-20240620225725124"
+      />
+      
+    </figure>
+</p>
+
+
+<h2 class="relative group">配置环境变量 
+    <div id="%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>此电脑——右击属性——高级系统设置——环境变量——双击Path——新建——添加刚才的两个目录</p>
+<p><strong>注意：我这里选择的是用户变量，也可以选择系统变量！</strong></p>
+<p>例如：<code>D:\Environment\Hugo\hugo</code> 和 <code>D:\Environment\Hugo\sass</code></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225833535_hu4f514e935266166024522ad359a10f81_23121_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225833535_hu4f514e935266166024522ad359a10f81_23121_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225833535_hu4f514e935266166024522ad359a10f81_23121_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225833535_hu4f514e935266166024522ad359a10f81_23121_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225833535_hu4f514e935266166024522ad359a10f81_23121_660x0_resize_box_3.png"
+        alt="image-20240620225833535"
+      />
+      
+    </figure>
+</p>
+
+
+<h2 class="relative group">检测是否安装成功 
+    <div id="%E6%A3%80%E6%B5%8B%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%A3%80%E6%B5%8B%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 查看当前版本</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">version</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 查看环境</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">env</span>
+</span></span></code></pre></div><p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225901134_hua2e3d856de30532f47c896b7ec125593_46761_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225901134_hua2e3d856de30532f47c896b7ec125593_46761_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225901134_hua2e3d856de30532f47c896b7ec125593_46761_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225901134_hua2e3d856de30532f47c896b7ec125593_46761_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620225901134_hua2e3d856de30532f47c896b7ec125593_46761_660x0_resize_box_3.png"
+        alt="image-20240620225901134"
+      />
+      
+    </figure>
+</p>
+<p>到此安装成功！</p>
+
+
+<h2 class="relative group">创建自己的博客项目 
+    <div id="%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 创建项目文件</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">new</span> <span class="nx">Site</span> <span class="nx">KongBlog</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 进入项目目录</span>
+</span></span><span class="line"><span class="cl"><span class="nx">cd</span> <span class="nx">KongBlog</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 初始化 git 仓库</span>
+</span></span><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">init</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 安装主题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">submodule</span> <span class="nx">add</span> <span class="nx">-b</span> <span class="nx">main</span> <span class="nx">https</span><span class="err">://</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="err">/</span><span class="nx">nunocoracao</span><span class="err">/</span><span class="nx">blowfish</span><span class="p">.</span><span class="nx">git</span> <span class="nx">themes</span><span class="err">/</span><span class="nx">blowfish</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 注意：主题下载完后，删除项目根目录下生成的 hugo.toml 文件，把主题中的 config 文件 拷贝到项目根目录下</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 项目根目录：KongBlog</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 主题的目录：KongBlog\themes\blowfish\config</span>
+</span></span><span class="line"><span class="cl"><span class="c">## 注意：这里要去项目根目录下的 config\_default\hugo.toml 文件中 设置主题配置，去掉注释即可。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 设置主题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s1">&#39;Blowfish&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 创建文章内容</span>
+</span></span><span class="line"><span class="cl"><span class="c"># hugo new 一级目录/文章标题/index.md</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 注意：markdown文件必须以index命名</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 目的：让图片资源与文章内容在同一目录下，方便管理！</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">new</span> <span class="nx">posts</span><span class="err">/</span><span class="nx">Hugo</span><span class="err">博客搭建/</span><span class="nx">index</span><span class="p">.</span><span class="nx">md</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 打开 content\posts\Hugo博客搭建\index.md 文件，把 draft = true 改成 false 启动后就可以看到文章</span>
+</span></span><span class="line"><span class="cl"><span class="c"># draft = true 是草稿的意思，不会显示。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># draft = false 是发布的意思，会显示。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 生成静态资源 public 目录（网页显示的内容）</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hugo</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 启动</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">server</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">设置主题的配置文件 
+    <div id="%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p><strong>Blowfish 主题官网文档</strong>：<a href="https://blowfish.page/zh-cn/docs/" target="_blank">https://blowfish.page/zh-cn/docs/</a></p>
+<p>主题下载完后，删除项目根目录下自动生成的 hugo.toml 文件，把主题中的 config 文件 拷贝到项目根目录下。</p>
+<p>主题目录：<code>themes\blowfish\config</code></p>
+<p>项目根目录：<code>KongBlog</code></p>
+<p>一旦你复制了这些文件，你的 config 目录看起来应该是这样：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">config</span><span class="err">/</span><span class="nx">_default</span><span class="err">/</span>
+</span></span><span class="line"><span class="cl"><span class="err">├─</span> <span class="nx">hugo</span><span class="p">.</span><span class="nx">toml</span>
+</span></span><span class="line"><span class="cl"><span class="err">├─</span> <span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">toml</span>
+</span></span><span class="line"><span class="cl"><span class="err">├─</span> <span class="nx">markup</span><span class="p">.</span><span class="nx">toml</span>  <span class="c"># 不需要配置</span>
+</span></span><span class="line"><span class="cl"><span class="err">├─</span> <span class="nx">menus</span><span class="p">.</span><span class="nx">en</span><span class="p">.</span><span class="nx">toml</span>
+</span></span><span class="line"><span class="cl"><span class="err">├─</span> <span class="nx">module</span><span class="p">.</span><span class="nx">toml</span>  <span class="c"># 不需要配置</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─</span> <span class="nx">params</span><span class="p">.</span><span class="nx">toml</span>
+</span></span></code></pre></div><p><strong>注意：在 hugo.toml 中，打开 theme = &ldquo;blowfish&rdquo; 注释，即可使用主题。</strong></p>
+<p>如果想要以下这个效果，可以把下面的配置信息复制到自己的配置文件中！</p>
+<p>如果不想使用如下效果，可以参考主题官网进行配置！</p>
+
+
+<h2 class="relative group">我的主题效果展示 
+    <div id="%E6%88%91%E7%9A%84%E4%B8%BB%E9%A2%98%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%88%91%E7%9A%84%E4%B8%BB%E9%A2%98%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620231952328_hu480a6e4e44df7c7bc5f452c276149161_101225_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620231952328_hu480a6e4e44df7c7bc5f452c276149161_101225_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620231952328_hu480a6e4e44df7c7bc5f452c276149161_101225_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620231952328_hu480a6e4e44df7c7bc5f452c276149161_101225_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620231952328_hu480a6e4e44df7c7bc5f452c276149161_101225_660x0_resize_box_3.png"
+        alt="image-20240620231952328"
+      />
+      
+    </figure>
+</p>
+
+
+<h2 class="relative group">我的配置文件信息 
+    <div id="%E6%88%91%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%88%91%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>中英文切换，需要创建两个文件，一个中文的 <code>index.md</code> ，一个英文的 <code>index.en.md</code>。</p>
+<p>中英文文件目录：content\posts\文章标题\index.md 和 index.en.md</p>
+<p>如果不想显示中英文切换，只默认以中文显示，把英文配置文件删掉即可。</p>
+
+
+<h3 class="relative group">hugo.toml 配置 
+    <div id="hugotoml-%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hugotoml-%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># -- Site Configuration --</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Refer to the theme docs for more details about each of these parameters.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># https://blowfish.page/docs/getting-started/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 主题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;blowfish&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 访问地址(改成自己的地址)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://localhost:1313/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 默认内容语言</span>
+</span></span><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 开启的字数和阅读时间</span>
+</span></span><span class="line"><span class="cl"><span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># pluralizeListTitles = &#34;true&#34; # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">enableRobotsTXT</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">paginate</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="nx">summaryLength</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">buildDrafts</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">buildFuture</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">enableEmoji</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># googleAnalytics = &#34;G-XXXXXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">imaging</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">anchor</span> <span class="p">=</span> <span class="s1">&#39;Center&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">author</span> <span class="p">=</span> <span class="s2">&#34;authors&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">series</span> <span class="p">=</span> <span class="s2">&#34;series&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">changefreq</span> <span class="p">=</span> <span class="s1">&#39;daily&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">filename</span> <span class="p">=</span> <span class="s1">&#39;sitemap.xml&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">priority</span> <span class="p">=</span> <span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;HTML&#34;</span><span class="p">,</span> <span class="s2">&#34;RSS&#34;</span><span class="p">,</span> <span class="s2">&#34;JSON&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">related</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">threshold</span> <span class="p">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">toLower</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">related</span><span class="p">.</span><span class="nx">indices</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">weight</span> <span class="p">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">related</span><span class="p">.</span><span class="nx">indices</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">weight</span> <span class="p">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">related</span><span class="p">.</span><span class="nx">indices</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;series&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">weight</span> <span class="p">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">related</span><span class="p">.</span><span class="nx">indices</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;authors&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">related</span><span class="p">.</span><span class="nx">indices</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;date&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">[[</span><span class="nx">related</span><span class="p">.</span><span class="nx">indices</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">applyFilter</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;fragmentrefs&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">type</span> <span class="p">=</span> <span class="s1">&#39;fragments&#39;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">languages.en.toml 配置 
+    <div id="languagesentoml-%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#languagesentoml-%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 网页标题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Sizeskong Blog&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">displayName</span> <span class="p">=</span> <span class="s2">&#34;English&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isoCode</span> <span class="p">=</span> <span class="s2">&#34;en&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">rtl</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">dateFormat</span> <span class="p">=</span> <span class="s2">&#34;2 January 2006&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># logo = &#34;img/logo.png&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># secondaryLogo = &#34;img/secondary-logo.png&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># description = &#34;My awesome website&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># copyright = &#34;Copy, _right?_ :thinking_face:&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 作者信息</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">author</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Sizeskong&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">image</span> <span class="p">=</span> <span class="s2">&#34;img/avatar.jpg&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#headline = &#34;一个强大、轻量级的 Hugo 主题。&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#bio = &#34;一个强大、轻量级的 Hugo 主题。&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#links = [</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#  { x-twitter = &#34;https://twitter.com/burufugu&#34; },</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#  { github = &#34;https://github.com/sizeskong&#34; },</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#]</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">languages.zh-cn.toml 配置 
+    <div id="languageszh-cntoml-%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#languageszh-cntoml-%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># 语言代码</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 语言的名称</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 语言权重顺序</span>
+</span></span><span class="line"><span class="cl"><span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 网页标题</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Sizeskong Blog&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 语言在网站中的展示名</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">displayName</span> <span class="p">=</span> <span class="s2">&#34;简体中文&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isoCode</span> <span class="p">=</span> <span class="s2">&#34;zh-cn&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">rtl</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">dateFormat</span> <span class="p">=</span> <span class="s2">&#34;2006-01-02&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># logo = &#34;img/logo.png&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># secondaryLogo = &#34;img/secondary-logo.png&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># description = &#34;My awesome website&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># copyright = &#34;Copy, _right?_ :thinking_face:&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 作者信息</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">author</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Sizeskong&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">image</span> <span class="p">=</span> <span class="s2">&#34;img/avatar.jpg&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#headline = &#34;一个强大、轻量级的 Hugo 主题。&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#bio = &#34;一个强大、轻量级的 Hugo 主题。&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#links = [</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#  { x-twitter = &#34;https://twitter.com/burufugu&#34; },</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#  { github = &#34;https://github.com/sizeskong&#34; },</span>
+</span></span><span class="line"><span class="cl">  <span class="c">#]</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">menus.en.toml 配置 
+    <div id="menusentoml-%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#menusentoml-%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># -- Main Menu --</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The main menu is displayed in the header at the top of the page.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Acceptable parameters are name, pageRef, page, url, title, weight.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># </span>
+</span></span><span class="line"><span class="cl"><span class="c"># The simplest menu configuration is to provide:</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   name = The name to be displayed for this menu link</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   pageRef = The identifier of the page or section to link to</span>
+</span></span><span class="line"><span class="cl"><span class="c">#</span>
+</span></span><span class="line"><span class="cl"><span class="c"># By default the menu is ordered alphabetically. This can be</span>
+</span></span><span class="line"><span class="cl"><span class="c"># overridden by providing a weight value. The menu will then be</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ordered by weight from lowest to highest.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Home&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># pre = &#34;bars&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Archives&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;/posts&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Tags&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 主菜单</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;StudyNotes&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;studyNotes&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">40</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 子菜单</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Go&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">parent</span> <span class="p">=</span> <span class="s2">&#34;StudyNotes&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;Go&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;MySQL&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">parent</span> <span class="p">=</span> <span class="s2">&#34;StudyNotes&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;MySQL&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;About&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;about&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;github&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;GitHub&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://github.com/sizeskong&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">70</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;example sub-menu 1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  parent = &#34;Parent&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;posts&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;example sub-menu 2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  parent = &#34;Parent&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;posts&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[subnavigation]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;An interesting topic&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;tags/interesting-topic&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[subnavigation]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;My Awesome Category&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pre = &#34;github&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;categories/awesome&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;Categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;Tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># -- Footer Menu --</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The footer menu is displayed at the bottom of the page, just before</span>
+</span></span><span class="line"><span class="cl"><span class="c"># the copyright notice. Configure as per the main menu above.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># [[footer]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   name = &#34;Tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   pageRef = &#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   weight = 10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># [[footer]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   name = &#34;Categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   pageRef = &#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   weight = 20</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">menus.zh-cn.toml 配置 
+    <div id="menuszh-cntoml-%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#menuszh-cntoml-%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># -- Main Menu --</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The main menu is displayed in the header at the top of the page.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Acceptable parameters are name, pageRef, page, url, title, weight.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># </span>
+</span></span><span class="line"><span class="cl"><span class="c"># The simplest menu configuration is to provide:</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   name = The name to be displayed for this menu link</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   pageRef = The identifier of the page or section to link to</span>
+</span></span><span class="line"><span class="cl"><span class="c">#</span>
+</span></span><span class="line"><span class="cl"><span class="c"># By default the menu is ordered alphabetically. This can be</span>
+</span></span><span class="line"><span class="cl"><span class="c"># overridden by providing a weight value. The menu will then be</span>
+</span></span><span class="line"><span class="cl"><span class="c"># ordered by weight from lowest to highest.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;首页&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># pre = &#34;bars&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;/&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;归档&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;posts&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;标签&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 主菜单</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;知识&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;studyNotes&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">40</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 子菜单</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;Go知识&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">parent</span> <span class="p">=</span> <span class="s2">&#34;知识&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;Go&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;MySQL知识&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">parent</span> <span class="p">=</span> <span class="s2">&#34;知识&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;MySQL&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;关于&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pageRef</span> <span class="p">=</span> <span class="s2">&#34;about&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">main</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pre</span> <span class="p">=</span> <span class="s2">&#34;github&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;GitHub&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://github.com/sizeskong&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">70</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;example sub-menu 1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  parent = &#34;Parent&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;posts&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;example sub-menu 2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  parent = &#34;Parent&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;posts&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[subnavigation]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;An interesting topic&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;tags/interesting-topic&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[subnavigation]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;My Awesome Category&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pre = &#34;github&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;categories/awesome&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;Categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 20</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">#[[main]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  name = &#34;Tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  pageRef = &#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#  weight = 30</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># -- Footer Menu --</span>
+</span></span><span class="line"><span class="cl"><span class="c"># The footer menu is displayed at the bottom of the page, just before</span>
+</span></span><span class="line"><span class="cl"><span class="c"># the copyright notice. Configure as per the main menu above.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># [[footer]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   name = &#34;Tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   pageRef = &#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   weight = 10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># [[footer]]</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   name = &#34;Categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   pageRef = &#34;categories&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c">#   weight = 20</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">params.toml 配置 
+    <div id="paramstoml-%E9%85%8D%E7%BD%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#paramstoml-%E9%85%8D%E7%BD%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># -- Theme Options --</span>
+</span></span><span class="line"><span class="cl"><span class="c"># These options control how the theme functions and allow you to</span>
+</span></span><span class="line"><span class="cl"><span class="c"># customise the display of your website.</span>
+</span></span><span class="line"><span class="cl"><span class="c">#</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Refer to the theme docs for more details about each of these parameters.</span>
+</span></span><span class="line"><span class="cl"><span class="c"># https://blowfish.page/docs/configuration/#theme-parameters</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 主题使用的颜色</span>
+</span></span><span class="line"><span class="cl"><span class="nx">colorScheme</span> <span class="p">=</span> <span class="s2">&#34;blowfish&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 默认的主题外观，可以是 light 或者 dark</span>
+</span></span><span class="line"><span class="cl"><span class="nx">defaultAppearance</span> <span class="p">=</span> <span class="s2">&#34;light&#34;</span> <span class="c"># valid options: light or dark</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 主题外观是否根据访问者操作系统的偏好自动切换。设置为 false 会强制网站始终使用 defaultAppearance</span>
+</span></span><span class="line"><span class="cl"><span class="nx">autoSwitchAppearance</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 是否开启网站的搜索功能，设为 true 即为启用</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enableSearch</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 是否可以将&lt;code&gt;代码块复制到剪贴板</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enableCodeCopy</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 指定最近文章中应该展示的模块。 如果没有指定，则使用文章数量最多的板块。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># mainSections = [&#34;section1&#34;, &#34;section2&#34;]</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 用于支持搜索引擎爬虫如何处理你的网站。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># robots = &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 禁用图片上所有图片的调整大小和优化功能。</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableImageOptimization</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 禁用文本类型的标题，对基于 logo 的标题很有用。</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disableTextInHeader</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 设置默认背景图，用于 background 和 hero 布局下的主页</span>
+</span></span><span class="line"><span class="cl"><span class="c"># defaultBackgroundImage = &#34;image.jpg&#34; # 默认用于背景图像 </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 设置默认背景图片，用于所有文章的featured图片，可以通过文章目录中的 featured 图片替换。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># defaultFeaturedImage = &#34;IMAGE.jpg&#34; # used as default for featured images in all articles</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 当菜单被选择时，标记主菜单中的菜单项。</span>
+</span></span><span class="line"><span class="cl"><span class="nx">highlightCurrentMenuArea</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 开启智能目录，视图中的项目将会被高亮显示。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># smartTOC = true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 当开启智能目录，如果目录级别不再被聚焦时，将会隐藏更深层次的目录。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># smartTOCHideUnfocusedChildren = true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">header</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layout</span> <span class="p">=</span> <span class="s2">&#34;fixed&#34;</span> <span class="c"># valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 页脚</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">footer</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showMenu</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 显示/隐藏页面底部菜单</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showCopyright</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 是否在底部显示 copyright 版权信息</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showThemeAttribution</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 是否在网站底部中显示&#34;powered by&#34; 的主题归属信息</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showAppearanceSwitcher</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 是否在也页面底部显示外观切换器</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showScrollToTop</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 当设置为 true 时，显示返回顶部的箭头按钮</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 主页</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">homepage</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layout</span> <span class="p">=</span> <span class="s2">&#34;profile&#34;</span> <span class="c"># valid options: page, profile, hero, card, background, custom 有效选项：页面、简介、英雄、卡片、背景、自定义</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># homepageImage = &#34;image.jpg&#34; # 在 hero 和 card 布局中使用的图像</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showRecent</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 是否在主页展示最新文章列表。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showRecentItems</span> <span class="p">=</span> <span class="mi">6</span> <span class="c"># 如果将 showRecent 设置为 true，此参数用于显示多少篇文章。如果没有设置或者为0，则默认显示5篇文章</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showMoreLink</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 是否在主页底部添加“显示更多”，该链接会降会用带到一个预定义位置。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showMoreLinkDest</span> <span class="p">=</span> <span class="s2">&#34;/posts&#34;</span> <span class="c"># 更多按钮所指向的位置。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cardView</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 将列表展示为卡片容器。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cardViewScreenWidth</span> <span class="p">=</span> <span class="kc">false</span> <span class="c"># 增强列表中卡片的宽度，使其可以占据可用的全部宽度。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layoutBackgroundBlur</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># 向下滚动主页时，是否模糊背景图。</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 文章页</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">article</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示日期。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showDate</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 缩略图是否会在每个页面中作为 hero 图像显示。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showHero</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># hero 图像的展示样式，可选的参数值有：basic、big、background、thumbAndBackground</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">heroStyle</span> <span class="p">=</span> <span class="s2">&#34;background&#34;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否展示文章的更新日期。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showDateUpdated</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在文章底部显示作者框。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showAuthor</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 作者框显示在每页的底部而不是顶部。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showAuthorBottom</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 向下滚动文章页时，是否模糊背景图。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layoutBackgroundBlur</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 在标题和正文之间添加空白区域间隔。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layoutBackgroundHeaderSpace</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c"># 是否在标题栏显示面包屑导航。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showBreadcrumbs</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 当使用 --buildDrafts 构建网站时，是否在文章旁边显示草稿</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showDraftLabel</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否展示编辑文章的链接。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showEdit</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否默认显示打开系列模块、</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">seriesOpened</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在文章标题旁添加锚点。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showHeadingAnchors</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在文章末尾展示上一篇/下一篇的文章链接。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showPagination</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否翻转下一篇/上一篇文章链接的方向。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">invertPagination</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否展示文章的阅读时间。如果你的语言包含 CJK 语言，需要在 config.toml 中开启 hasCJKLanguage 参数。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showReadingTime</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章的字数。 如果你的语言属于 CJK 语言，需要在 hugo.toml 中开启 hasCJKLanguage 参数。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showWordCount</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否展示文章的目录。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showTableOfContents</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 为文章显示相关内容。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showRelatedContent</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 如果启用showRelatedContent，则限制显示相关文章的数量</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">relatedContentLimit</span> <span class="p">=</span> <span class="mi">3</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章的分类或标签信息。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showTaxonomies</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 否在文章或列表中显示 authors 分类。这需要开启多个作者 multiple authors 和 authors 分类法。 </span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showAuthorsBadges</span> <span class="p">=</span> <span class="kc">false</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在文章末尾添加 评论部分</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showComments</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 在文章末尾显示的分享链接。如果没有提供或设置为 false，则不会显示任何分享链接。可用的值包括：“linkedin”、“twitter”、“reddit”、“pinterest”、“facebook”、“email”、“whatsapp” 和 “telegram”</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># sharingLinks = [ &#34;linkedin&#34;, &#34;twitter&#34;, &#34;reddit&#34;, &#34;pinterest&#34;, &#34;facebook&#34;, &#34;email&#34;, &#34;whatsapp&#34;, &#34;telegram&#34;]</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c"># 指定是否激活文章阅读的禅模式，即隐藏常规的界面元素。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showZenMode</span> <span class="p">=</span> <span class="kc">true</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">list</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># 缩略图是否会在每个页面中作为 hero 图像显示。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showHero</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># hero 图像的展示样式，可选的参数值有：basic、big、background、thumbAndBackground。</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># heroStyle = &#34;background&#34; </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在标题栏显示面包屑导航。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showBreadcrumbs</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 向下滚动列表页时，是否模糊背景图。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layoutBackgroundBlur</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># only used when heroStyle equals background or thumbAndBackground</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 在标题和正文之间添加空白区域间隔。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layoutBackgroundHeaderSpace</span> <span class="p">=</span> <span class="kc">true</span> <span class="c"># only used when heroStyle equals background  </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否展示目录。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showTableOfContents</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在列表页显示文章摘要。如果在扉页参数中没有提供摘要，那么将会使用站点配置 中的 summaryLength 参数自动生成一个。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showSummary</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章阅读量。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showViews</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章点赞量。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showLikes</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否将每个文章显示未卡片或简单的内联文本。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showCards</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否根据年做聚合。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">groupByYear</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 将列表展示为卡片容器。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cardView</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 增强列表中卡片的宽度，使其可以占据可用的全部宽度。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cardViewScreenWidth</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 将项目宽度限制为 prose 以提高可读性。在没有 featurn 图片的时候非常有用。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constrainItemsWidth</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">sitemap</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">excludedKinds</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;taxonomy&#34;</span><span class="p">,</span> <span class="s2">&#34;term&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 分类法</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomy</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在分类列表总显示对应的数量。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showTermCount</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 缩略图是否会在每个页面中作为 hero 图像显示。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showHero</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># hero 图像的展示样式，可选的参数值有：basic、big、background、thumbAndBackground。</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># heroStyle = &#34;background&#34; </span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在标题栏显示面包屑导航。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showBreadcrumbs</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章阅读量。这需要集成 firebase </span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showViews</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章点赞量。这需要集成 firebase </span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showLikes</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示目录。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showTableOfContents</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 将列表展示为卡片容器。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cardView</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 术语</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">term</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># 缩略图是否会在每个页面中作为 hero 图像显示。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showHero</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># hero 图像的展示样式，可选的参数值有： basic、big、background、thumbAndBackground。</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># heroStyle = &#34;background&#34; # valid options: basic, big, background, thumbAndBackground</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否在标题栏显示面包屑导航。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showBreadcrumbs</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章阅读量。这需要集成 firebase </span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showViews</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示文章点赞量。这需要集成 firebase </span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showLikes</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否显示目录。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">showTableOfContents</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 是否根据年做聚合。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">groupByYear</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 将列表展示为卡片容器。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cardView</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c"># 增强列表中卡片的宽度，使其可以占据可用的全部宽度。</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">cardViewScreenWidth</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 文章阅读点赞量</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">firebase</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># apiKey = &#34;XXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># authDomain = &#34;XXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># projectId = &#34;XXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># storageBucket = &#34;XXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># messagingSenderId = &#34;XXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># appId = &#34;XXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># measurementId = &#34;XXXXXX&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 支持 Fathom 站点分析平台</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">fathomAnalytics</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># site = &#34;ABC12345&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># domain = &#34;llama.yoursite.com&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 支持 Umami 站点分析平台</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">umamiAnalytics</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># websiteid = &#34;ABC12345&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># domain = &#34;llama.yoursite.com&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># buymeacoffee 账号信息。</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">buymeacoffee</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># identifier = &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># globalWidget = true</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># globalWidgetMessage = &#34;Hello&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># globalWidgetColor = &#34;#FFDD00&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># globalWidgetPosition = &#34;Right&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 验证</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">verification</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># google = &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># bing = &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># pinterest = &#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="c"># yandex = &#34;&#34;</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">Hugo图片显示 
+    <div id="hugo%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hugo%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>目的：让图片资源与文章内容在同一目录下，方便管理。</p>
+<ol>
+<li>
+<p>创建文章时，设置文章路径</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">hugo</span> <span class="nx">new</span> <span class="err">一级目录/文章标题/</span><span class="nx">index</span><span class="p">.</span><span class="nx">md</span>
+</span></span></code></pre></div><p><strong>注意：Markdown 文件必须以 <code>index</code> 命名</strong></p>
+</li>
+<li>
+<p>打开 Typora——文件——偏好设置——图像，设置内容如下：</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620233532450_hub62ce606277605e52f59875ee4085fe2_48339_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620233532450_hub62ce606277605e52f59875ee4085fe2_48339_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620233532450_hub62ce606277605e52f59875ee4085fe2_48339_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620233532450_hub62ce606277605e52f59875ee4085fe2_48339_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240620233532450_hub62ce606277605e52f59875ee4085fe2_48339_660x0_resize_box_3.png"
+        alt="image-20240620233532450"
+      />
+      
+    </figure>
+</p>
+</li>
+</ol>
+<p>目录结构：</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240621001850961_hu23673d0f6fa436ea4351914bf8a3c2d9_24479_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240621001850961_hu23673d0f6fa436ea4351914bf8a3c2d9_24479_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240621001850961_hu23673d0f6fa436ea4351914bf8a3c2d9_24479_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240621001850961_hu23673d0f6fa436ea4351914bf8a3c2d9_24479_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240621001850961_hu23673d0f6fa436ea4351914bf8a3c2d9_24479_660x0_resize_box_3.png"
+        alt="image-20240621001850961"
+      />
+      
+    </figure>
+</p>
+
+
+<h2 class="relative group">Hugo 自动部署到 Github Pages 
+    <div id="hugo-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hugo-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>这里使用的是分支部署，用 <code>main</code> 分支来存储源文件，用 <code>gh-pages</code> 来作为网页发布源。如果嫌麻烦，也可以直接使用官网的配置进行部署。<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">官网部署</a></p>
+
+
+<h3 class="relative group">1、创建仓库 
+    <div id="1%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#1%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623190435212_huf02285f0f7e1f3201a0cff3d807c5d37_95678_660x0_resize_box_3.png"
+        alt="image-20240623190435212"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">2、创建分支 
+    <div id="2%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623191121461_hu75578ff1ce1623eb7ad716b954f28243_41752_660x0_resize_box_3.png"
+        alt="image-20240623191121461"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">3、设置网页发布源 
+    <div id="3%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5%E5%8F%91%E5%B8%83%E6%BA%90" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#3%E8%AE%BE%E7%BD%AE%E7%BD%91%E9%A1%B5%E5%8F%91%E5%B8%83%E6%BA%90" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192053771_hu9cb8056897cddb091fe820ab095cd06c_124966_660x0_resize_box_3.png"
+        alt="image-20240623192053771"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">4、域名解析（域名自行购买） 
+    <div id="4%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D%E8%87%AA%E8%A1%8C%E8%B4%AD%E4%B9%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#4%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%9F%9F%E5%90%8D%E8%87%AA%E8%A1%8C%E8%B4%AD%E4%B9%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>进入解析界面</li>
+<li>添加记录</li>
+<li>记录类型选择 <strong>CNAME</strong></li>
+<li>选择主机记录，根据提示自行选择</li>
+<li>解析请求来源默认</li>
+<li>记录值填写 GitHub Pages 上的域名，例如：username.github.io</li>
+<li>确认</li>
+</ol>
+<p>示例：</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192234184_hu06a23d64b0600236e0aec6fe03685b06_40763_660x0_resize_box_3.png"
+        alt="image-20240623192234184"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">5、绑定解析的域名 
+    <div id="5%E7%BB%91%E5%AE%9A%E8%A7%A3%E6%9E%90%E7%9A%84%E5%9F%9F%E5%90%8D" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#5%E7%BB%91%E5%AE%9A%E8%A7%A3%E6%9E%90%E7%9A%84%E5%9F%9F%E5%90%8D" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>打开 Github 自己博客的项目，点击 settings 进入设置界面</li>
+<li>下翻到 Pages 目录，进入 Github Pages 下的 Custom domain ，填入刚解析的域名</li>
+<li>勾选 Enforce HTTPS ，使用 HTTPS 保护 GitHub Pages 网站的信息（默认自动勾选）。</li>
+<li>点击 Save</li>
+</ol>
+<p>示例：</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192540953_hu8b262a122447a33525218ff4c8ab61c2_131289_660x0_resize_box_3.png"
+        alt="image-20240623192540953"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">6、克隆仓库到本地 
+    <div id="6%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93%E5%88%B0%E6%9C%AC%E5%9C%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#6%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93%E5%88%B0%E6%9C%AC%E5%9C%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><strong>克隆项目地址</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623192924555_hu18e0653a06948e2e6ae0b19ef47d0700_26054_660x0_resize_box_3.png"
+        alt="image-20240623192924555"
+      />
+      
+    </figure>
+</p>
+<p><strong>克隆仓库到本地的文件目录</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193316709_hu87ead05346df2d61b9debfda94b00baa_14545_660x0_resize_box_3.png"
+        alt="image-20240623193316709"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">7、打开自己的博客项目 
+    <div id="7%E6%89%93%E5%BC%80%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#7%E6%89%93%E5%BC%80%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>把 克隆到本地目录中的文件 复制到 自己的博客项目中</p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240623193620036_hu34d730e6e6c0df2b811369f1a49b817e_51620_660x0_resize_box_3.png"
+        alt="image-20240623193620036"
+      />
+      
+    </figure>
+</p>
+
+
+<h3 class="relative group">8、创建 Actions 工作流 
+    <div id="8%E5%88%9B%E5%BB%BA-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#8%E5%88%9B%E5%BB%BA-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在项目根目录下创建<code>.github/workflows/</code> 的目录，并以 <code>.yml</code> 后缀命名，内容如下：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># .github/workflows/hugo.yml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">GitHub Pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">main</span><span class="w"> </span><span class="c"># 设置要部署的分支</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">concurrency</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.workflow }}-${{ github.ref }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v4</span><span class="w"> </span><span class="c"># 官网：https://github.com/actions/checkout</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">submodules</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-hugo@v3</span><span class="w"> </span><span class="c"># 官网：https://github.com/peaceiris/actions-hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">hugo-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.127.0&#34;</span><span class="w"> </span><span class="c"># 当前使用的版本 hugo version 查看</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">hugo --minify</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v4</span><span class="w"> </span><span class="c"># 官网：https://github.com/peaceiris/actions-gh-pages</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">${{ github.ref == &#39;refs/heads/main&#39; }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.HUGO_TOKEN }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">gh-pages</span><span class="w"> </span><span class="c"># 设置用作 GitHub Pages 分支的分支名称。默认为 gh-pages。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">          </span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public</span><span class="w"> </span><span class="c"># 把 public 文件里的内容，部署到 gh-pages 分支上</span><span class="w">
+</span></span></span></code></pre></div>
+
+<h3 class="relative group">9、创建令牌 
+    <div id="9%E5%88%9B%E5%BB%BA%E4%BB%A4%E7%89%8C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#9%E5%88%9B%E5%BB%BA%E4%BB%A4%E7%89%8C" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>点击头像</li>
+<li>选择 Settings</li>
+<li>左侧找到 Developer settings</li>
+<li>选择 Personal access tokens 下的 Tokens (classic)</li>
+<li>点击 Generate new token 选择 Generate new token (classic)</li>
+<li>输入账号密码</li>
+<li>Note下输入令牌备注（随便填，建议大写）</li>
+<li>Expiration 选择 no expiration （不过期）</li>
+<li>勾选 repo 和 workflow</li>
+<li>点击 Generate token</li>
+<li>复制 ghp_xxx 内容（只显示一次）</li>
+</ol>
+
+
+<h3 class="relative group">10、添加存储库机密 
+    <div id="10%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8%E5%BA%93%E6%9C%BA%E5%AF%86" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#10%E6%B7%BB%E5%8A%A0%E5%AD%98%E5%82%A8%E5%BA%93%E6%9C%BA%E5%AF%86" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>
+<p>进入到自己的博客项目</p>
+</li>
+<li>
+<p>点击 Settings</p>
+</li>
+<li>
+<p>找到 Secrets and variables 下的 Actions</p>
+</li>
+<li>
+<p>点击 New repository secret</p>
+</li>
+<li>
+<p>输入 Name</p>
+<p><strong>注意：Name 与 <code>.github/workflows/hugo.yml</code> 文件中的  github_token: ${{ secrets.<code>HUGO_TOKEN</code> }} 一致</strong></p>
+</li>
+<li>
+<p>把刚才以 ghp_xxx 开头的token复制到 Secret 下</p>
+</li>
+<li>
+<p>点击 Add secret</p>
+</li>
+</ol>
+
+
+<h3 class="relative group">11、发布部署 
+    <div id="11%E5%8F%91%E5%B8%83%E9%83%A8%E7%BD%B2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#11%E5%8F%91%E5%B8%83%E9%83%A8%E7%BD%B2" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>上传到远程仓库 <code>main</code> 分支中 会自动把 <strong>pulic</strong> 文件中的内容部署到 <code>gh-pages</code> 中</p>
+<p>在博客项目根目录下：右击——Git Bash Here</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Init Hugo Blog&#34;</span> <span class="c1"># 描述上传的内容</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></div>
+
+<h3 class="relative group">12、博客访问地址 
+    <div id="12%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#12%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>项目地址：<a href="https://sizeskong.github.io" target="_blank">https://sizeskong.github.io</a></p>
+<p>域名地址：<a href="https://blog.kong.love" target="_blank">https://blog.kong.love</a></p>
+<p><strong>注意：如果配置了域名，会自动跳转到域名地址，也可以之间访问域名地址。</strong></p>
+
+
+<h2 class="relative group">Hugo 添加 <a href="https://giscus.app/zh-CN" target="_blank">Giscus </a>评论 
+    <div id="hugo-%E6%B7%BB%E5%8A%A0-giscus-httpsgiscusappzh-cn%E8%AF%84%E8%AE%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#hugo-%E6%B7%BB%E5%8A%A0-giscus-httpsgiscusappzh-cn%E8%AF%84%E8%AE%BA" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>Giscus 官网：<a href="https://giscus.app/zh-CN" target="_blank">https://giscus.app/zh-CN</a></p>
+<p>填写仓库：<strong>sizeskong/sizeskong.github.io</strong></p>
+<p>页面映射关系：<strong>Discussion 的标题包含页面的 <code>pathname</code></strong></p>
+<p>Discussion 分类：<strong>Announcements</strong></p>
+<p>
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240624203707889_hu849b897178527710198bc816b130b040_98909_330x0_resize_box_3.png 330w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240624203707889_hu849b897178527710198bc816b130b040_98909_660x0_resize_box_3.png 660w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240624203707889_hu849b897178527710198bc816b130b040_98909_1024x0_resize_box_3.png 1024w,
+        /posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240624203707889_hu849b897178527710198bc816b130b040_98909_1320x0_resize_box_3.png 2x"
+        src="/posts/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index/image-20240624203707889_hu849b897178527710198bc816b130b040_98909_660x0_resize_box_3.png"
+        alt="image-20240624203707889"
+      />
+      
+    </figure>
+</p>
+<p>往下滑，找到配置文件。记下<code>data-repo</code>，<code>data-repo-id</code>，<code>data-category</code>，<code>data-category-id</code>，<code>data-mapping</code>这几个值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="p">=</span><span class="s2">&#34;https://giscus.app/client.js&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-repo</span><span class="p">=</span><span class="s2">&#34;sizeskong/sizeskong.github.io&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-repo-id</span><span class="p">=</span><span class="s2">&#34;R_kgDOMM_icA&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-category</span><span class="p">=</span><span class="s2">&#34;Announcements&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-category-id</span><span class="p">=</span><span class="s2">&#34;DIC_kwDOMM_icM4CgVvk&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-mapping</span><span class="p">=</span><span class="s2">&#34;pathname&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-strict</span><span class="p">=</span><span class="s2">&#34;0&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-reactions-enabled</span><span class="p">=</span><span class="s2">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-emit-metadata</span><span class="p">=</span><span class="s2">&#34;0&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-input-position</span><span class="p">=</span><span class="s2">&#34;bottom&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-theme</span><span class="p">=</span><span class="s2">&#34;preferred_color_scheme&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data-lang</span><span class="p">=</span><span class="s2">&#34;zh-CN&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">crossorigin</span><span class="p">=</span><span class="s2">&#34;anonymous&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">async</span><span class="err">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;/</span><span class="nx">script</span><span class="err">&gt;</span>
+</span></span></code></pre></div>
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\\Hugo博客搭建\\index.md"
+        var oid_likes = "likes_posts\\Hugo博客搭建\\index.md"
+      </script>
+      
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Go学习笔记</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-06-22 17:22:44 &#43;0800 CST">2024-06-22</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+    
+    
+    
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2024
+      Sizeskong
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

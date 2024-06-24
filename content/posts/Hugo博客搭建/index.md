@@ -1018,3 +1018,39 @@ git push origin main
 
 
 
+## Hugo 添加 [Giscus ](https://giscus.app/zh-CN)评论 
+
+Giscus 官网：[https://giscus.app/zh-CN](https://giscus.app/zh-CN)
+
+填写仓库：**sizeskong/sizeskong.github.io**
+
+页面映射关系：**Discussion 的标题包含页面的 `pathname`**
+
+Discussion 分类：**Announcements**
+
+![image-20240624203707889](index/image-20240624203707889.png)
+
+
+
+
+
+往下滑，找到配置文件。记下`data-repo`，`data-repo-id`，`data-category`，`data-category-id`，`data-mapping`这几个值
+
+```toml
+<script src="https://giscus.app/client.js"
+        data-repo="sizeskong/sizeskong.github.io"
+        data-repo-id="R_kgDOMM_icA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOMM_icM4CgVvk"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+

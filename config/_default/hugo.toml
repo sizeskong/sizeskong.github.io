@@ -34,12 +34,26 @@ buildFuture = false
 
 # 评论设置
 [params]
-  gitalk = true
-  gitalk_client_id = "Ov23liHU7qrWIwuBtavT"
-  gitalk_client_secret = "97eb8724ea7a656ea5015bc22707a879c424719a"
-  gitalk_repo = "sizeskong.github.io"
-  gitalk_owner = "sizeskong"
-  gitalk_admins = ["sizeskong"]
+  [params.page]
+    [params.page.comment]
+          enable = true
+          # giscus comment 评论系统设置 (https://giscus.app/zh-CN)
+          [params.page.comment.giscus]
+            # 你可以参考官方文档来使用下列配置
+            enable = true
+            repo = "sizeskong/sizeskong.github.io"
+            repoId = "R_kgDOMM_icA"
+            category = "Announcements"
+            categoryId = "DIC_kwDOMM_icM4CgVvk"
+            # 为空时自动适配当前主题 i18n 配置
+            lang = "zh-CN"
+            mapping = "pathname"
+            reactionsEnabled = "1"
+            emitMetadata = "0"
+            inputPosition = "bottom"
+            lazyLoading = false
+            lightTheme = "light"
+            darkTheme = "preferred_color_scheme"
 
 
 # googleAnalytics = "G-XXXXXXXXX"
