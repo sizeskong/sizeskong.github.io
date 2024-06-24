@@ -12,19 +12,35 @@ baseURL = "https://blog.kong.love/"
 # 默认内容语言
 defaultContentLanguage = "zh-cn"
 
-# 开启的字数和阅读时间
+# 开启文章字数和阅读时间
 hasCJKLanguage = true
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
+# 当开启这个值，robots.txt 文件将会被创建在站点根目录， 这将允许搜索引擎抓取整个网站。
 enableRobotsTXT = true
+
+# 定义文章列表中，每页展示的文章数量。
 paginate = 10
+
+# 当扉页参数 中没有提供文章摘要时，此参数定义了自动生成文章摘要的单词数量。如果值为0，则默认使用第一句话作为摘要。当摘要被隐藏，这个值没有任何效果。
 summaryLength = 0
+
+# 开启全局表情
+enableEmoji = true
 
 buildDrafts = false
 buildFuture = false
 
-enableEmoji = true
+# 评论设置
+[params]
+  gitalk = true
+  gitalk_client_id = "Ov23liHU7qrWIwuBtavT"
+  gitalk_client_secret = "97eb8724ea7a656ea5015bc22707a879c424719a"
+  gitalk_repo = "sizeskong.github.io"
+  gitalk_owner = "sizeskong"
+  gitalk_admins = ["sizeskong"]
+
 
 # googleAnalytics = "G-XXXXXXXXX"
 

@@ -137,6 +137,12 @@ config/_default/
 
 ## 我的配置文件信息
 
+中英文切换，需要创建两个文件，一个中文的 `index.md` ，一个英文的 `index.en.md`。
+
+中英文文件目录：content\posts\文章标题\index.md 和 index.en.md
+
+如果不想显示中英文切换，只默认以中文显示，把英文配置文件删掉即可。
+
 ### hugo.toml 配置
 
 ```toml
