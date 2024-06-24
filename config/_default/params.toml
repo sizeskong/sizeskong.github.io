@@ -147,6 +147,13 @@ highlightCurrentMenuArea = true
   # 指定是否激活文章阅读的禅模式，即隐藏常规的界面元素。
   showZenMode = true 
 
+# 评论
+[Comments]
+  # 是否开启文章评论
+  enable = true
+  # 全局指定文章评论giscus |twikoo |waline
+  provider = "giscus" 
+
 
 [list]
   # 缩略图是否会在每个页面中作为 hero 图像显示。
