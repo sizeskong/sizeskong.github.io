@@ -964,7 +964,7 @@ jobs:
 
 ### 9、创建令牌
 
-1. 点击头像
+1. 点击 Github 用户头像
 2. 选择 Settings
 3. 左侧找到 Developer settings
 4. 选择 Personal access tokens 下的 Tokens (classic)
@@ -1014,11 +1014,304 @@ git push origin main
 
 域名地址：[https://blog.kong.love](https://blog.kong.love)
 
-**注意：如果配置了域名，会自动跳转到域名地址，也可以之间访问域名地址。**
+**注意：如果配置了域名，会自动跳转到域名地址，也可以直接访问域名地址。**
 
 
 
-## Hugo 添加 [Giscus ](https://giscus.app/zh-CN)评论 
+## Hugo 添加评论 
+
+Blowfish 主题支持了在每篇文章底部添加一个评论功能。只需要提供一个 `layouts/partials/comments.html` 文件，并在其中添加显示评论的代码即可。
+
+### 启用主题的评论功能
+
+在配置文件 `config\_default\params.toml`中找到 `[article] 下的 showComments` 并设置参数为 `true`
+
+```toml
+[article]
+  showComments = true # 是否在文章末尾添加评论部分
+```
+
+### 启用 **Discussions** 讨论功能
+
+在仓库中选择 **Settings**
+
+![image-20240625103337020](index/image-20240625103337020.png)
+
+往下翻 **Discussions** 勾选
+
+![image-20240625103404875](index/image-20240625103404875.png)
+
+### 安装  [Giscus app](https://github.com/apps/giscus) 评论
+
+![image-20240625095736750](index/image-20240625095736750.png)
+
+**选择存储库**
+
+![image-20240625100416565](index/image-20240625100416565.png)
+
+
+
+### 配置 [Giscus](https://giscus.app/zh-CN) 仓库
+
+![image-20240625101309704](index/image-20240625101309704.png)
+
+
+
+![image-20240625101351020](index/image-20240625101351020.png)
+
+
+
+![image-20240625101447116](index/image-20240625101447116.png)
+
+复制代码，页面中使用
+
+![image-20240625101634340](index/image-20240625101634340.png)
+
+
+
+### 添加评论页面
+
+在博客根目录 `layouts\partials` 下添加 `comments.html` 文件
+
+```html
+<script src="https://giscus.app/client.js"
+        data-repo="" # 仓库地址
+        data-repo-id="" # 仓库id
+        data-category="Announcements" # 分类名
+        data-category-id="" # 分类id
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+
+
+### 自定义评论功能
+
+#### 修改主题评论布局
+
+复制主题中 **theme/blowfish/layouts/_default/ **下的 `single.html`文件到 博客根目录下 `layouts/_default/`
+
+找到以下这段代码
+
+```html
+{{ if .Params.showComments | default (.Site.Params.article.showComments | default false) }}
+{{ if templates.Exists "partials/comments.html" }}
+<div class="pt-3">
+    <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+    <div class="pt-3">
+        {{ partial "comments.html" . }}
+    </div>
+</div>
+{{ else }}
+{{ warnf "[BLOWFISH] Comments are enabled for %s but no comments partial exists." .File.Path }}
+{{ end }}
+{{ end }}
+```
+
+将上面这段代码换成下面这样
+
+```html
+{{ if .Params.Comments.enable | default (.Site.Params.Comments.enable | default false) }}
+{{ $comment := .Params.Comments.provider | default .Site.Params.Comments.provider }}
+ {{ $provider := print "partials/Comments/" $comment  ".html" }}
+    {{ if templates.Exists $provider }}
+    <div class="pt-3">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="pt-3">
+        {{ partial $provider . }}
+      </div>
+    </div>
+   {{ else }}
+    {{ warnf "[BLOWFISH] Comments are enabled for %s but no $provider partial exists." .File.Path }}
+    {{ end }}
+    {{ end }}
+
+```
+
+
+
+#### 添加评论页面
+
+- 在博客目录下`layouts/partials/` 创建一个`Comments`目录。
+- 评论系统都放到这个目录下，按照评论系统名称命名。例如：giscus评论，则`giscus.html`
+- 把刚才的 comments.html 文件 复制到 Comments 目录下 并重命名为 giscus.html
+
+#### 配置 [Twikoo](https://twikoo.js.org/) 评论
+
+- 在`layouts/partials/Comments`目录下创建一个`twikoo.html`文件
+
+```html
+# 添加以下内容
+    <div id="tcomment"></div>
+    <script src="https://cdn.staticfile.org/twikoo/{{ .Site.Params.twikoo.version }}/twikoo.all.min.js"></script>
+    <script>
+        twikoo.init({
+            envId: 'https://xxx.vercel.app', // Twikoo服务端地址
+            el: '#tcomment',
+            //lang: 'zh-CN',
+            //region: 'ap-shanghai', 
+            //path: 'pathname',
+        });
+    </script>
+
+```
+
+
+
+#### 配置 [Waline](https://waline.js.org/) 评论
+
+- 在`layouts/partials/Comments`目录下创建一个`waline.html`文件
+
+```html
+        <link href="https://unpkg.com/@waline/client@v3/dist/waline.css" rel="stylesheet" />
+        <script src="https://unpkg.com/@waline/client@v3/dist/waline.js"></script>      
+        
+        <div id="waline"></div>    
+        <script type="module">    
+              import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+              init({      
+              el: '#waline',      
+              meta: ['nick','mail','link'],  // 评论属性
+              requiredMeta: ['nick','mail'],  //  必填项，昵称与邮件
+              login: 'force',                 // 登录后访问
+              comment: true,             // 评论数统计 
+              placeholder: '欢迎评论',   // 评论框占位提示符
+              serverURL: "https://xxx.vercel.app",   // Waline 服务端地址
+              avatar: "wavatar",                    // 头像
+              avatarCDN: "https://sdn.geekzu.org/avatar/",    // 头像cdn
+              pageSize: 10,                  // 评论每页条数
+              lang: "zh-CN",                 // 语言
+              visitor: true,                 // 文章访问量统计
+              highlight: true,               // 代码高亮
+              uploadImage: false,            // 评论上传图片功能
+              emoji: "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo"                      // emoji 表情包
+              })
+        </script>  
+
+```
+
+#### 添加评论配置
+
+- 编辑配置文件`config/_default/params.toml`
+
+```toml
+# 在空白处添加以下内容
+# 全局评论配置
+[Comments]
+  # 是否开启文章评论,不建议全局开启，可在有需要页面开启。
+  enable = true
+  # 全局指定文章评论 giscus |twikoo |waline
+  provider = "giscus" 
+```
+
+- 在文章中也可以控制评论系统，只需要在 `font matter` 处添加
+
+```toml
+Comments:
+  provider: "waline"
+```
+
+
+
+#### 修改主题页面布局
+
+- 在博客目录下`layouts/_default/` 添加一个`list.html`文件
+
+```html
+复制 theme/blowfish/layouts/_default/list.html  到  layouts/_default/
+```
+
+- 编辑 `list.html` 文件
+
+```html
+# 在  {{ partial "pagination.html" . }}  这行的下面添加以下内容
+
+{{ if .Params.pageComments.enable | default (.Site.Params.pageComments.enable | default false) }}
+{{ $comment := .Params.pageComments.provider | default .Site.Params.Comments.provider }}
+    {{ $provider := print "partials/Comments/" $comment  ".html" }}
+    {{ if templates.Exists $provider }}
+    <div class="pt-3">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="pt-3">
+        {{ partial $provider . }}
+      </div>
+    </div>
+    {{ else }}
+    {{ warnf "[BLOWFISH] Comments are enabled for %s but no $provider partial exists." .File.Path }}
+    {{ end }}
+{{ end }}
+
+```
+
+#### 修改配置文件
+
+- 编辑配置文件`config/_default/params.toml`
+
+```toml
+# 在空白处添加以下内容
+
+pageComments
+  # 是否开启分页评论。不建议全局开启，可在有需要页面开启。
+  enable = false
+
+```
+
+
+
+#### Font Matter 填写
+
+- 文章级别`index.md`
+
+  ```toml
+  # 开启
+  ---
+  Comments:
+    enable: true  # 如果全局已开启，这条可以忽略
+    provider: "twikoo"
+  ---
+  
+  # 关闭
+  ---
+  Comments:
+    enable: false
+  ---
+  
+  ```
+
+- 页面级别`_index.md`
+
+  ```toml
+  # 开启
+  ---
+  pageComments:
+    enable: true
+    provider: "giscus"
+  ---
+  
+  # 关闭
+  ---
+  pageComments:
+    enable: false
+  ---
+  
+  ```
+
+  
+
+
+
+
+
+
 
 Giscus 官网：[https://giscus.app/zh-CN](https://giscus.app/zh-CN)
 
@@ -1029,8 +1322,6 @@ Giscus 官网：[https://giscus.app/zh-CN](https://giscus.app/zh-CN)
 Discussion 分类：**Announcements**
 
 ![image-20240624203707889](index/image-20240624203707889.png)
-
-
 
 
 
@@ -1053,5 +1344,45 @@ Discussion 分类：**Announcements**
         crossorigin="anonymous"
         async>
 </script>
+```
+
+
+
+
+
+参考文献：https://ergua.site/docs/theme/comment/
+
+https://www.haoyep.com/posts/hugo-add-component/
+
+
+
+Leancloud:https://console.leancloud.app/apps/psYe3q8Ljr5K1WmYSHl3qmY7-MdYXbMMI/settings/keys
+
+```go
+<link href="https://unpkg.com/@waline/client@v3/dist/waline.css" rel="stylesheet" />
+<script src="https://unpkg.com/@waline/client@v3/dist/waline.js"></script>      
+
+<div id="waline"></div>    
+<script type="module">    
+      import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+      init({      
+      el: '#waline',      
+      meta: ['nick','mail','link'],  // 评论属性
+      requiredMeta: ['nick','mail'],  //  必填项，昵称与邮件
+      login: 'force',                 // 登录后访问
+      comment: true,             // 评论数统计 
+      placeholder: '欢迎评论',   // 评论框占位提示符
+      serverURL: "https://xxx.vercel.app",   // Waline 服务端地址
+      avatar: "wavatar",                    // 头像
+      avatarCDN: "https://sdn.geekzu.org/avatar/",    // 头像cdn
+      pageSize: 10,                  // 评论每页条数
+      lang: "zh-CN",                 // 语言
+      visitor: true,                 // 文章访问量统计
+      highlight: true,               // 代码高亮
+      uploadImage: false,            // 评论上传图片功能
+      emoji: "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo"                      // emoji 表情包
+      })
+</script>  
+
 ```
 

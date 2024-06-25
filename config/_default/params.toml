@@ -151,8 +151,12 @@ highlightCurrentMenuArea = true
 [Comments]
   # 是否开启文章评论
   enable = true
-  # 全局指定文章评论giscus |twikoo |waline
+  # 全局指定文章评论 giscus |twikoo |waline
   provider = "giscus" 
+
+[pageComments]
+  # 是否开启分页评论。不建议全局开启，可在有需要页面开启。
+  enable = false
 
 
 [list]
