@@ -162,6 +162,126 @@
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     
     <div class="flex flex-1 items-center justify-between">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <div id="aplayera" style="opacity:0.8;color: var(--tw-prose-headings);"></div>
+        <script type="text/javascript">
+          const ap = new APlayer({
+            container: document.getElementById('aplayera'),
+                fixed: true,
+                lrcType: 3,
+                order: 'random',
+            audio: [{
+                name: '有些牢笼是自己给自己的)',
+                artist: 'Jla',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/hWPoyiPB9NNfgaJ6TRC1pIHBW97po9sC/Jla%20-%20%E6%9C%89%E4%BA%9B%E7%89%A2%E7%AC%BC%E6%98%AF%E8%87%AA%E5%B7%B1%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84.mp3',
+                cover: 'http://p2.music.126.net/XufuAf6Hadqi4ZI8_sLDoQ==/109951168216967524.jpg?param=130y130',
+                
+            },
+                {
+                name: 'TiK ToK (红月7iv降速版)',
+                artist: 'Kesha',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/fIL4ksc7C55Fg4P8baPm812p81gQJ9cB/Kesha%20-%20TiK%20ToK%20%28%E7%BA%A2%E6%9C%887iv%E9%99%8D%E9%80%9F%E7%89%88%29.mp3',
+                cover: '../img/music/20201010134903334915.jpg',
+                
+            },
+           
+            {
+                name: '一个深爱的女孩',
+                artist: '蛋炒饭',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/Q3k2yOS1cPNHWjCy6Q0sutFQxdH5g637/%E8%9B%8B%E7%82%92%E9%A5%AD%20-%20%E4%B8%80%E4%B8%AA%E6%B7%B1%E7%88%B1%E7%9A%84%E5%A5%B3%E5%AD%A9.mp3',
+                cover: 'https://lc-gluttony.s3.amazonaws.com/dRYJBlSN7EF3/OQaFrdqT2Yiuzcmtx2uIlsLG8GjD6ok3/%E8%9D%B6%E3%80%85%E7%B5%90%E3%81%B3.jpg',
+                
+            },
+            {
+                name: 'Legend of Heroes',
+                artist: '陈安排',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/Gw5SFtEzNHWWqcRb6lNy5L1LveItg0Ck/%E9%99%88%E5%AE%89%E6%8E%92%20-%20Legend%20of%20Heroes.mp3',
+                cover: 'https://lc-gluttony.s3.amazonaws.com/dRYJBlSN7EF3/OQaFrdqT2Yiuzcmtx2uIlsLG8GjD6ok3/%E8%9D%B6%E3%80%85%E7%B5%90%E3%81%B3.jpg',
+                
+            },
+            {
+                name: 'III (Find Yourself)',
+                artist: 'Athletics',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/vUL5Qx7dkU7PI3ojRi5SzuX8fGG1PwKc/III%20%28Find%20Yourself%29%20-%20Athletics.mp3',
+                cover: 'https://lc-gluttony.s3.amazonaws.com/dRYJBlSN7EF3/OQaFrdqT2Yiuzcmtx2uIlsLG8GjD6ok3/%E8%9D%B6%E3%80%85%E7%B5%90%E3%81%B3.jpg',
+                
+            },
+            {
+                name: '骰子没有第七点',
+                artist: '李想家',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/nyKXGsB54AaiSRlV4SjvqtI2PJzMFLih/%E6%9D%8E%E6%83%B3%E5%AE%B6%20-%20%E9%AA%B0%E5%AD%90%E6%B2%A1%E6%9C%89%E7%AC%AC%E4%B8%83%E7%82%B9.mp3',
+                cover: 'https://lc-gluttony.s3.amazonaws.com/dRYJBlSN7EF3/OQaFrdqT2Yiuzcmtx2uIlsLG8GjD6ok3/%E8%9D%B6%E3%80%85%E7%B5%90%E3%81%B3.jpg',
+                
+            },
+            {
+                name: 'New Song (15秒片段)',
+                artist: '未知歌手',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/jVQxVE1WJivua4wplzBHX6g80YDtT9x6/%E6%9C%AA%E7%9F%A5%E6%AD%8C%E6%89%8B%20-%20New%20Song%20%2815%E7%A7%92%E7%89%87%E6%AE%B5%29.mp3',
+                cover: 'https://lc-gluttony.s3.amazonaws.com/dRYJBlSN7EF3/OQaFrdqT2Yiuzcmtx2uIlsLG8GjD6ok3/%E8%9D%B6%E3%80%85%E7%B5%90%E3%81%B3.jpg',
+                
+            },
+            ]
+        });
+        
+                ready();
+            
+            isRecover = false;
+            function ready(){
+                ap.on('canplay', function () {
+                    if(!isRecover){
+                        if(localStorage.getItem("musicIndex") != null){
+                            musicIndex = localStorage.getItem("musicIndex");
+                            musicTime = localStorage.getItem("musicTime");
+                            if(ap.list.index != musicIndex){
+                                ap.list.switch(musicIndex);
+                            }else{
+                                ap.seek(musicTime);
+                                ap.play();
+                                localStorage.clear();
+                                ap.setAttribute(muted,'');
+                                ap.setAttribute(playsinline,'');
+                                isRecover = true;
+                            }
+                        }else{
+                            isRecover = true;
+                        }
+                    }
+                });
+            }
+        
+            window.onbeforeunload = function(event) {
+                if(!ap.audio.paused){
+                    musicIndex = ap.list.index;
+                    musicTime = ap.audio.currentTime;
+                    localStorage.setItem("musicIndex",musicIndex);
+                    localStorage.setItem("musicTime",musicTime);
+                }
+            };
+        
+        
+        
+        var element = document.getElementsByClassName("aplayer-title")[0];  
+        $(element).wrap("<a href='/radio/pick/'></a>");
+        </script>
+        
+        
+        
+        
+        
+        <style type="text/css">
+            .aplayer-title, .aplayer-list-light {
+                color:#000000cc;
+            }
+            .aplayer-list{
+                color:#717070bf;
+            }
+        </style>
+        
+        
+
+
         <nav class="flex space-x-3">
 
             
@@ -714,7 +834,6 @@
     
 
   </header>
-  
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
      <div

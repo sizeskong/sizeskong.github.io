@@ -1,0 +1,304 @@
+<div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    {{ if .Site.Params.Logo }}
+    {{ $logo := resources.Get .Site.Params.Logo }}
+    {{ if $logo }}
+    <div>
+        <a href="{{ "" | relLangURL }}" class="flex">
+            <span class="sr-only">{{ .Site.Title | markdownify }}</span>
+
+            <img src="{{ $logo.RelPermalink }}" width="{{ div $logo.Width 2 }}" height="{{ div $logo.Height 2 }}"
+                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="{{ .Site.Title }}" />
+
+        </a>
+    </div>
+    {{ end }}
+    {{- end }}
+    <div class="flex flex-1 items-center justify-between">
+        <!-- 以下是新增代码 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <div id="aplayera" style="opacity:0.8;color: var(--tw-prose-headings);"></div>
+        <script type="text/javascript">
+          const ap = new APlayer({
+            container: document.getElementById('aplayera'),
+                fixed: true,
+                lrcType: 3,
+                order: 'random',
+            audio: [
+                // name:    歌曲名
+                // artist:  艺术家
+                // url:     音频地址 从LeanCloud复制
+                // cover:   封面地址 放到 static/images/ 目录下
+                // lrc:     歌词地址 
+            {
+                name: 'Legend of Heroes',
+                artist: '陈安排',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/Gw5SFtEzNHWWqcRb6lNy5L1LveItg0Ck/%E9%99%88%E5%AE%89%E6%8E%92%20-%20Legend%20of%20Heroes.mp3',
+                cover: '/images/2b9764d533188804833fb769addd7eb5.jpeg',
+                // lrc: 'https://lc-gluttony.s3.amazonaws.com/dRYJBlSN7EF3/r1HTik6Im5Bzuvfo7JQiAMIEoBqs2m7I/Aimer%20%28%E3%82%A8%E3%83%A1%29%20-%20%E8%9D%B6%E3%80%85%E7%B5%90%E3%81%B3%20%28%E8%9D%B4%E8%9D%B6%E7%BB%93%29.lrc'
+            },
+            {
+                name: 'III (Find Yourself)',
+                artist: 'Athletics',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/vUL5Qx7dkU7PI3ojRi5SzuX8fGG1PwKc/III%20%28Find%20Yourself%29%20-%20Athletics.mp3',
+                cover: '/images/e29ff58e31fdfbcbeb50f912146d2a27.jpg',
+                // lrc: 'https://lc-gluttony.s3.amazonaws.com/dRYJBlSN7EF3/r1HTik6Im5Bzuvfo7JQiAMIEoBqs2m7I/Aimer%20%28%E3%82%A8%E3%83%A1%29%20-%20%E8%9D%B6%E3%80%85%E7%B5%90%E3%81%B3%20%28%E8%9D%B4%E8%9D%B6%E7%BB%93%29.lrc'
+            },
+            {
+                name: '有些牢笼是自己给自己的)',
+                artist: 'Jla',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/hWPoyiPB9NNfgaJ6TRC1pIHBW97po9sC/Jla%20-%20%E6%9C%89%E4%BA%9B%E7%89%A2%E7%AC%BC%E6%98%AF%E8%87%AA%E5%B7%B1%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84.mp3',
+                cover: 'http://p2.music.126.net/XufuAf6Hadqi4ZI8_sLDoQ==/109951168216967524.jpg?param=130y130',
+                lrc: ''
+            },
+            {
+                name: '骰子没有第七点',
+                artist: '李想家',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/nyKXGsB54AaiSRlV4SjvqtI2PJzMFLih/%E6%9D%8E%E6%83%B3%E5%AE%B6%20-%20%E9%AA%B0%E5%AD%90%E6%B2%A1%E6%9C%89%E7%AC%AC%E4%B8%83%E7%82%B9.mp3',
+                cover: '/images/03d831da8e6a1572919ab8dd90736221.jpg',
+                lrc: ''
+            },
+            {
+                name: '一个深爱的女孩',
+                artist: '蛋炒饭',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/Q3k2yOS1cPNHWjCy6Q0sutFQxdH5g637/%E8%9B%8B%E7%82%92%E9%A5%AD%20-%20%E4%B8%80%E4%B8%AA%E6%B7%B1%E7%88%B1%E7%9A%84%E5%A5%B3%E5%AD%A9.mp3',
+                cover: '/images/20210322104623935863.jpg',
+                lrc: ''
+            },
+            {
+                name: 'TiK ToK (红月7iv降速版)',
+                artist: 'Kesha',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/fIL4ksc7C55Fg4P8baPm812p81gQJ9cB/Kesha%20-%20TiK%20ToK%20%28%E7%BA%A2%E6%9C%887iv%E9%99%8D%E9%80%9F%E7%89%88%29.mp3',
+                cover: '/images/20201010134903334915.jpg',
+                lrc: ''
+            },
+            {
+                name: 'New Song (15秒片段)',
+                artist: '未知歌手',
+                url: 'https://lc-gluttony.s3.amazonaws.com/psYe3q8Ljr5K/jVQxVE1WJivua4wplzBHX6g80YDtT9x6/%E6%9C%AA%E7%9F%A5%E6%AD%8C%E6%89%8B%20-%20New%20Song%20%2815%E7%A7%92%E7%89%87%E6%AE%B5%29.mp3',
+                cover: '/images/6a0ae5256fcc230ccf39f969141900af.jpeg',
+                lrc: ''
+            },
+            
+            ]
+        });
+        
+                ready();
+            
+            isRecover = false;
+            function ready(){
+                ap.on('canplay', function () {
+                    if(!isRecover){
+                        if(localStorage.getItem("musicIndex") != null){
+                            musicIndex = localStorage.getItem("musicIndex");
+                            musicTime = localStorage.getItem("musicTime");
+                            if(ap.list.index != musicIndex){
+                                ap.list.switch(musicIndex);
+                            }else{
+                                ap.seek(musicTime);
+                                ap.play();
+                                localStorage.clear();
+                                ap.setAttribute(muted,'');
+                                ap.setAttribute(playsinline,'');
+                                isRecover = true;
+                            }
+                        }else{
+                            isRecover = true;
+                        }
+                    }
+                });
+            }
+        
+            window.onbeforeunload = function(event) {
+                if(!ap.audio.paused){
+                    musicIndex = ap.list.index;
+                    musicTime = ap.audio.currentTime;
+                    localStorage.setItem("musicIndex",musicIndex);
+                    localStorage.setItem("musicTime",musicTime);
+                }
+            };
+        
+        
+        
+        var element = document.getElementsByClassName("aplayer-title")[0];  
+        $(element).wrap("<a href='{{i18n "pathAppendix"}}/radio/pick/'></a>");
+        </script>
+        
+        
+        
+        
+        
+        <style type="text/css">
+            .aplayer-title, .aplayer-list-light {
+                color:#000000cc;
+            }
+            .aplayer-list{
+                color:#717070bf;
+            }
+        </style>
+        
+        <!-- 以上是新增代码 -->
+
+
+        <nav class="flex space-x-3">
+
+            {{ if not .Site.Params.disableTextInHeader | default true }}
+            <a href="{{ "" | relLangURL }}" class="text-base font-medium text-gray-500 hover:text-gray-900">{{
+                .Site.Title | markdownify
+                }}</a>
+            {{ end }}
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            {{ if .Site.Menus.main }}
+            {{ range .Site.Menus.main }}
+            {{ partial "header/header-option.html" . }}
+            {{ end }}
+            {{ end }}
+
+            {{ partial "translations.html" . }}
+
+            {{ if .Site.Params.enableSearch | default false }}
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="{{ i18n " search.open_button_title" }}">
+                {{ partial "icon.html" "search" }}
+            </button>
+            {{ end }}
+
+
+            {{/* Appearance switch */}}
+            {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
+            <div
+                class="{{ if .Site.Params.footer.showScrollToTop | default true -}} ltr:mr-14 rtl:ml-14 {{- end }} flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        {{ partial "icon.html" "moon" }}
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        {{ partial "icon.html" "sun" }}
+                    </div>
+                </button>
+            </div>
+            {{ end }}
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            {{ partial "translations.html" . }}
+
+            {{ if .Site.Params.enableSearch | default false }}
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="{{ i18n " search.open_button_title" }}">
+                {{ partial "icon.html" "search" }}
+            </button>
+            {{ end }}
+
+            {{/* Appearance switch */}}
+            {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    {{ partial "icon.html" "moon" }}
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    {{ partial "icon.html" "sun" }}
+                </div>
+            </button>
+            {{ end }}
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            {{ if .Site.Menus.main }}
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                {{ partial "icon.html" "bars" }}
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">{{
+                            partial
+                            "icon.html"
+                            "xmark" }}</span>
+                    </li>
+
+                    {{ range .Site.Menus.main }}
+
+                    {{ partial "header/header-mobile-option.html" . }}
+
+                    {{ end }}
+
+                </ul>
+                {{ if .Site.Menus.subnavigation }}
+                <hr>
+                <ul
+                    class="flex mt-4 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+
+                    {{ range .Site.Menus.subnavigation }}
+                    <li class="mb-1">
+                        <a href="{{ .URL }}" {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:"
+                            ) }} target="_blank" {{ end }} class="flex items-center">
+                            {{ if .Pre }}
+                            <span {{ if and .Pre .Name}} class="mr-3" {{ end }}>
+                                {{ partial "icon.html" .Pre }}
+                            </span>
+                            {{ end }}
+                            <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="{{ .Title }}">
+                                {{ .Name | markdownify }}
+                            </p>
+                        </a>
+                    </li>
+                    {{ end }}
+
+                </ul>
+                {{ end }}
+                {{ end }}
+
+            </div>
+        </label>
+    </div>
+</div>
+
+{{ if .Site.Menus.subnavigation }}
+<div class="main-menu flex pb-3 flex-col items-end justify-between md:justify-start space-x-3" {{ if .Site.Params.Logo
+    }} style="margin-top:-15px" {{ end }}>
+    <div class="hidden md:flex items-center space-x-5">
+        {{ range .Site.Menus.subnavigation }}
+        <a href="{{ .URL }}" {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
+            target="_blank" {{ end }} class="flex items-center">
+            {{ if .Pre }}
+            <span {{ if and .Pre .Name}} class="mr-1" {{ end }}>
+                {{ partial "icon.html" .Pre }}
+            </span>
+            {{ end }}
+            <p class="text-xs font-light text-gray-500 hover:text-gray-900" title="{{ .Title }}">
+                {{ .Name | markdownify }}
+            </p>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
+{{ if .Site.Params.highlightCurrentMenuArea }}
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+{{ end }}
