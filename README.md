@@ -1,4 +1,4 @@
 # sizeskong.github.io
 
-我的博客地址：[blog.kong.love](blog.kong.love)
+我的博客地址：https://blog.kong.love/
 
