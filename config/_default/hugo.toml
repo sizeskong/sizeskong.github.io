@@ -12,6 +12,9 @@ baseURL = "https://blog.kong.love/"
 # 默认内容语言
 defaultContentLanguage = "zh-cn"
 
+# logo
+svgFavicon = ""
+
 # 开启文章字数和阅读时间
 hasCJKLanguage = true
 

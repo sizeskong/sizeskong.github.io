@@ -16,16 +16,20 @@
     {{- end }}
     <div class="flex flex-1 items-center justify-between">
         <!-- 以下是新增代码 -->
-         <!-- 参考：https://www.karlukle.site/blogs/site-build/#leancloud -->
+         <!-- 参考：
+         官网：https://github.com/metowolf/MetingJS#option 
+         https://www.karlukle.site/blogs/site-build/#leancloud 
+          -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
         <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
         <div id="aplayera" style="opacity:0.8;color: var(--tw-prose-headings);"></div>
         <script type="text/javascript">
           const ap = new APlayer({
             container: document.getElementById('aplayera'),
-                fixed: true,
+                fixed: true,    // 启用固定模式，固定在左下角,默认false
                 lrcType: 3,
-                order: 'random',
+                order: 'random', // order=[random=随机播放,list=列表播放]
+                loop: "all",//loop=[all=全部循环, one=循环一次 ,none=不循环]
             audio: [
                 // name:    歌曲名
                 // artist:  艺术家
@@ -126,13 +130,15 @@
         $(element).wrap("<a href='{{i18n "pathAppendix"}}/radio/pick/'></a>");
         </script>
         
-        
-        
-        
-        
         <style type="text/css">
+            .aplayer .aplayer-info .aplayer-music .aplayer-author {
+                font-size: 12px;
+                color: #38c1ff;
+            }
+        
             .aplayer-title, .aplayer-list-light {
-                color:#000000cc;
+                color: #38c1ff;
+                /* color:#000000cc; */
             }
             .aplayer-list{
                 color:#717070bf;
