@@ -1,2 +1,2 @@
 # sizeskong.github.io
-My Hugo Blog
+我的博客地址：sizeskong.github.io
